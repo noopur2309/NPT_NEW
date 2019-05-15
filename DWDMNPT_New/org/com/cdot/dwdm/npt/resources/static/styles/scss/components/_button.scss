@@ -1,0 +1,246 @@
+.btn {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  color: $color-default;
+  display: inline-block;
+  transition: all 0.2s;
+  outline: none;
+  font-weight: bolder;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border: none;
+    outline: none;
+  }
+
+  //btn click style
+  &:active,
+  &:focus {
+    //color: $color-white;
+  }
+
+  &--white {
+    background-color: $text-color-gray-light;
+    color: $text-color-gray-dark;
+  }
+
+  &--default {
+    // border: 2.5px solid $color-black;
+    border-radius: 1.5rem;
+    // background: transparent;
+    // color: $color-black;
+    color: $color-white;
+    background-image: linear-gradient(to left top, $color-gray, $color-black);
+    // overflow: hidden;
+    padding: 0.6rem 1.5rem;
+
+    &:hover,
+    &:active {
+      // background: $color-black;
+      color: $color-white;
+      background-image: linear-gradient(to left top, $color-gray, $color-black);
+      // transform: translateY(1px);
+      box-shadow: 0 0.5rem 1rem $color-gray;
+    }
+
+    &:focus {
+      color: $color-white;
+    }
+  }
+
+  &--success {
+    // background-color: $color-success;
+    // color: $color-white;
+
+    &:hover {
+      color: $color-success;
+      // background-color: $color-success-hover;
+    }
+  }
+
+  &--danger {
+    // background-color: $color-danger;
+    // color: $color-white;
+
+    &:hover {
+      color: $color-danger;
+      // background-color: $color-danger-hover;
+    }
+  }
+
+  &--warning {
+    // background-color: $color-warning;
+    // color: $color-white;
+
+    &:hover {
+      color: $color-warning;
+      // background-color: $color-warning-hover;
+    }
+  }
+
+  &--animated {
+    animation: slideInBottom 1s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+
+  &--circle {
+    border-radius: 50%;
+    border: 2.5px solid $color-gray-light;
+    color: $color-gray-light;
+  }
+}
+
+//Npt
+.btn-block {
+  display: block;
+  /* width: 102%; */
+  border-radius: 0;
+}
+
+.btn-group .btn {
+  width: 50%;
+  border-radius: 0;
+  margin: 0px;
+}
+
+//   .btn {
+//     /*  box-shadow: -3px 0px 5px dimgrey;
+//        background: linear-gradient(to right, #2199e0 0%, #2e6da4 32%);
+//     color: white; */
+// /* transition:font-size 0.2s; */
+// &:hover {
+//   color: white;
+//   /* font-size: 20px; */
+//   background: linear-gradient(to right, #2199e0, #337ab7);
+//   box-shadow: 0px 0px 0px dimgrey;
+// }
+// &:focus {
+//   outline: none;
+// }
+// }
+
+// .btn-success, .btn-danger, .btn-custom, .btn-primary, .btn-default, .btn-warning {
+// border: none;
+// border-radius: 0;
+// /*  min-width: 100px; */
+// font-weight: bolder;
+// box-shadow: 0px .2rem .5rem #959e9b;
+// }
+
+// .btn-success {
+// background: #5cb888 !important;
+// }
+
+// .btn-danger, .btn-warning {
+// background: #a94442 !important;
+// }
+
+// .btn-header {
+// border: .2rem solid #ccc;
+// margin: .3rem;
+// border-radius: 1rem;
+// transition: all 0.4s;
+// background-color: transparent;
+// /* border: none; */
+// color: #777;
+// }
+
+// .btn-header-close:hover {
+// color: #a94442;
+// font-weight: 900;
+// /* background-color: white; */
+// border-radius: 0;
+// /* border: 2px solid #a94442; */
+// }
+
+// .btn-header-min:hover {
+// color: #f57900;
+// font-weight: 900;
+// background-color: white;
+// }
+
+// .loadingModalCloseBtn {
+// width: 25%;
+// border-radius: .2rem;
+// transition: width 1s;
+// /* height: 70px; */
+// &:hover {
+//   width: 75%;
+//   background: linear-gradient(to right, #a94442, #cb3d39);
+// }
+// }
+
+.editable-buttons {
+  display: block;
+  zoom: 0.5;
+  margin: 0.7rem;
+
+  .editable-cancel {
+    background: #a94442 !important;
+    color: $color-white;
+  }
+
+  .editable-submit {
+    background: #265a88 !important;
+    color: $color-white;
+  }
+}
+
+.shortcut-button-ul {
+  list-style-type: none;
+  /* display: inline-block; */
+  /* width: 26%; */
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+
+  li {
+    float: left;
+    margin: 0.3rem;
+    &:hover {
+      color: $text-color-gray-dark;
+      transform: scale(1.1);
+      border: 1px solid $color-black;
+      border-radius: 3rem;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $color-gray;
+  }
+}
+
+.resize-button-ul {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 6rem;
+  z-index: 405;
+  display: flex;
+  li {
+    list-style-type: none;
+    text-align: center;
+    margin: 0.1rem;
+    display: inline-block;
+    display: flex;
+    button {
+      background: $color-gray;
+      color: $color-white;
+      font-weight: 900;
+      &:hover {
+        background: $primary-color;
+        transform: scale(1, 1);
+        color: $color-white;
+        font-weight: 900;
+      }
+
+      &:active {
+        color: $color-white;
+      }
+    }
+  }
+}

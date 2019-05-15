@@ -1,0 +1,552 @@
+
+	/***************************
+****************************
+Global styles
+****************************
+***************************/
+	
+		body {
+    background-color: #f5f5f5;
+    font-family: 'Gudea', sans-serif;
+    font-weight:500;
+    overflow-y:auto;
+}
+
+.contentArea .col-md-2,.contentArea .col-sm-2{
+	padding-right:0px;
+}
+
+.container-fluid{
+	padding:0;
+	margin:0;
+}
+
+
+/***************************
+****************************
+title bar styles(Menu Bar)
+****************************
+***************************/
+
+#main-content {
+    max-width: 940px;
+    padding: 2em 3em;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.example5 .navbar-brand {
+  display: flex;
+  align-items: center;
+  padding:0px;
+  font-family: 'Croissant One', cursive;
+  font-weight:900;
+}
+
+.navbar-brand {
+	padding:0 0 0 0;}
+	
+	.navbar-brand>img {
+    display: inline;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 0px; 
+}
+
+.navbar{
+	margin-bottom:0px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #dff0d8;
+    background-color: #5cb85c;
+    background-image: none;
+    }
+    
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #333333;
+}
+
+.navbar-brand h4{
+	 transition-property: color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
+.navbar-brand h4:hover{
+	color:red;
+}
+
+#loadMap{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#loadMap + label{
+	font-weight:100;
+	cursor:pointer;
+}
+
+/***************************
+****************************
+Tool bar styles
+****************************
+***************************/
+
+
+
+
+
+
+
+
+/***************************
+****************************
+Network Elements bar styles Network Elements
+****************************
+***************************/
+#networkElementId{
+
+}
+
+.panel-default>.panel-heading {
+    background-color: rgb(92, 184, 92);
+	    color: #fff;
+	         border-top-left-radius: 0px; 
+    border-top-right-radius: 0px; 
+    background-image:none;
+}
+.panel{
+	margin-bottom:0px;
+}
+
+.panel-heading:hover{
+	background: #333333;
+}
+
+.panel-heading a:hover{
+	text-decoration:none;
+}
+
+
+
+/***************************
+****************************
+Canvas styles
+****************************
+***************************/
+
+#canvasId{
+	background:#ffffff;
+    min-height: 851px;
+    border: 2px solid grey;
+}
+}
+ .link-tools{
+	display:none;
+}
+
+.tool-options circle{
+    background: #777;
+    z-index: 0;
+    stroke: black;
+    fill-opacity: 100;
+    display:none;
+}
+
+.tool-options path{
+    background: #777;
+    z-index: 0;
+    stroke: black;
+    fill-opacity: 100;
+    display:none; 
+}
+ 
+.element , .link-tools,.tools-remove, .marker-arrowheads, .marker-vertices {
+    cursor: pointer;
+    /* position: fixed; */
+}
+
+.tool-remove{
+	/* fill:rgba(255,255,255,0); */
+	 display:none; 
+}
+
+.tool-remove path{
+	fill:#E74C3C;
+	/* display:none; */
+}
+
+.tool-remove:hover{
+	fill:rgba(0,0,0,1); 
+}
+ 
+ 
+ .connection-wrap{
+  stroke-width:2;
+ }
+ 
+ .connection-wrap:hover{
+  stroke-width:10;
+ }
+ 
+ 
+.element * , .link-tools *, .marker-arrowheads *,  .marker-vertices *{
+    vector-effect: non-scaling-stroke;
+    -moz-user-select: none;
+    user-drag: none;
+    position: fixed; 
+}
+ 
+.element:hover{
+    background-color: #428bca;
+}
+
+#clearpaper{
+	position:absolute;
+	top:5px;
+	right:5px;
+}
+
+.joint-port circle{
+	background: rgba(149, 188, 222, 0);
+    z-index: 0;
+    stroke: rgba(240, 248, 255, 0);
+    fill-opacity: 0;
+}
+
+.joint-port circle:hover{
+	fill: rgba(48, 177, 32, 0.7);
+    z-index: 0;
+    /* stroke: rgba(240, 248, 255, .5); */
+    fill-opacity: .8;
+	
+}
+
+
+/* .marker-source,.marker-target{
+	display:none;
+}
+ */
+
+ circle{
+/* 	background: rgba(149, 188, 222, 0);
+    z-index: 0;
+    stroke: rgba(240, 248, 255, 0);
+    fill-opacity: 0;  */
+    cursor: crosshair;
+} 
+
+
+
+/***************************
+****************************
+Side bar styles (Properties)
+****************************
+***************************/
+#sidebar{
+	overflow:auto;
+	padding:0;
+    background: #fbfbfb;
+}
+
+#propertyBody{
+	overflow:auto;
+	height:350px;
+}
+
+#tabularMenu{
+	
+}
+
+#propertyOuter{
+
+}
+
+ .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  
+ #propertValues{
+  overflow:auto;
+ }
+
+#propertySave:hover{
+	color:red;
+}
+
+.form-control {
+
+    border: 1px solid #5cb85c;
+    }
+    
+    #color{
+    width:40px;
+    }
+    
+/***************************
+****************************
+NPT added Styles
+****************************
+***************************/
+
+
+
+
+.collapseNavBar{
+
+	cursor:col-resize;
+	background-color:#e5e5e5;
+	background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAHBAMAAADdS/HjAAAAGFBMVEUzMzP///9tbW1QUFCKiopBQUF8fHxfX1/IXlmXAAAAHUlEQVQImWMQEGAQFWUQFmYQF2cQEmIQE2MQEQEACy4BF67hpEwAAAAASUVORK5CYII=);
+	_background-image:url('thumb_vertical.png');
+	background-repeat:no-repeat;
+	background-position:center center;
+	width: 8px; top: 95px; bottom: 0px;
+    left: 0px;
+	
+}
+
+.geDiagramContainerColEx {
+	
+	overflow:hidden;
+	position:absolute;
+	cursor:default;	
+	background-color:#ffffff;
+	outline:none;	
+	right: 240px;
+	left: 5px;
+	top: 95px;
+	bottom: 0px; 
+	overflow: auto;
+	
+	background-color: #ebebeb;
+	border-style: solid;
+	border-color: #e5e5e5;
+	border-width: 1px 0px 0px 1px;
+}
+
+
+
+
+#upleft { 
+   width:100px; 
+   height: 300px; 
+   background:red; 
+   float:left; 
+}
+
+#upright { 
+   width:300px; 
+   height:200px; 
+   background:blue; 
+   float:left
+}
+#below { 
+   height:300px; 
+   width:400px; 
+   background:green 
+}
+
+
+
+#paper {
+  
+  /****
+   width:100px; 
+   height: 100px; 
+   background:red; 
+   float:left;
+   */
+  background: silver;
+}
+
+#stencil {
+	width:100px; 
+   height:100px; 
+   background:blue; 
+   float:left
+  background: #146DFF;
+}
+
+ #paperCanvas {
+                display: inline-block;
+                border: 1px solid gray;
+            }
+            
+            
+            
+/***************************
+****************************
+Context Menu Styles
+****************************/     
+
+
+
+.custom-menu, .custom-menu-submenu{
+  display: none;
+  z-index:1000;
+  position: absolute;
+  background-color: rgb(229, 229, 229);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(114, 114, 114);
+  font-family: helvetica;
+  padding: 0px 0.25em 0px 1.5em;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+}
+
+.custom-menu, .custom-menu-submenu,  li {
+  padding: 5px;
+   cursor: pointer;
+}
+
+.custom-menu, .custom-menu-submenu,  li:hover {
+  background-color: #DDD;
+  cursor: pointer;
+}
+
+
+
+/***************************
+****************************
+Dropdown Menu Styles
+****************************/     
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/***************************
+****************************
+Model Styles
+****************************/  
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Body */
+.modal-body {padding: 26px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.createMapBtn{
+    background: #1a1a1a;
+    color: white;
+    border: 1px solid #1c1d1c;
+}
+
+.createMapBtn:hover{
+	
+    background: #777;
+    color: #ffffff;
+}
+
+
+
+/***************************
+****************************
+Footer Styles
+****************************
+***************************/
+
+footer .row{
+	background:#5cb85c;
+}
+
+footer p{
+	color:white;
+}
+/***************************
+****************************
+Animations
+****************************
+***************************/
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

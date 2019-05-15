@@ -1,0 +1,48 @@
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    // min-width: 25%;
+    background-color: $primary-color;
+    border-radius: 0;
+    box-shadow: 0 1rem 1.5rem $secondary-color;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0 0.5rem;
+
+    a {
+      color: $secondary-color-light;
+      text-decoration: none;
+      font-weight: 200;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+
+  li.active {
+    background-color: $color-gray;
+
+    a {
+      color: white;
+      background-color: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    &:hover {
+      background-color: $color-gray;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.row{
+    display: block;
+    max-width:$row-width;
+    // background: grey;
+    margin: 0 auto;
+
+    &:not(:last-child){
+        margin-bottom:$col-margin-vertical;
+    }
+
+    @include clearfix;
+
+    [class^="col-"]{
+        // background: rgb(148, 58, 58);
+        float: left;
+
+        &:not(:last-child){
+            margin-right:$col-margin-horizontal;
+        }
+    }
+
+    .col-1{
+        width: calc((100% - 11*#{$col-margin-horizontal})/12);
+    }
+
+    .col-2{
+        width: calc((100% - 5*#{$col-margin-horizontal})/6);
+    }
+
+    .col-3{
+        width: calc((100% - 3*#{$col-margin-horizontal})/4);
+    }
+    
+    .col-4{
+        width: calc((100% - 2*#{$col-margin-horizontal})/3);
+    }
+
+    .col-6{
+        width: calc((100% - #{$col-margin-horizontal})/2);
+    }
+    
+
+} 

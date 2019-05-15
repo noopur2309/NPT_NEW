@@ -1,0 +1,258 @@
+/* 
+#modalBodyviewReportHeadPanel p {	
+	color: #777;
+}
+
+#modalBodyviewReportHeadPanel p span {
+	font-weight: bolder;
+	color: #244824;
+}
+ */
+#modalBodyviewReportContentPanelwavelengthConfi,#modalBodyviewReportContentPanelviewNodeReport,
+#modalBodyviewReportContentPanelviewLinkReport,#modalBodyviewReportContentPanelCablingDiagram,#modalBodyviewReportContentPanelwavelengthConfi,
+#modalBodyviewReportContentPanelMPNConfi,#modalBodyviewReportContentPanelInventory,#modalBodyviewReportContentPanelOpticalPower{
+	display:none;
+}
+
+#modalBodyviewReportTabMenu{
+	/* border-bottom:  2px solid #777; */
+    text-align: center;
+    /* margin-bottom: 16px; */
+    padding: 8px 0;
+          background: #abbaab;
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, rgba(173, 183, 169, 0.2), rgba(171, 186, 171, 0.24));
+        /* box-shadow: 0px -3px 7px #c4c4c4; */
+}
+
+#modalBodyviewReportTabMenu .btn , #modalBodyviewReportContentPanelOpticalPower .btn{
+  -webkit-transition: color 300ms;
+    transition: color 300ms,border-color 0.3s;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bolder;
+    width: 20%;
+    margin: 5px;
+    /* border: 0.2px solid #283048; */
+    border-radius: 0;
+    padding: 10px 0px;
+}
+
+#modalBodyviewReportTabMenu .btn:before , #modalBodyviewReportContentPanelOpticalPower .btn:before{
+	content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #77bda0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+#modalBodyviewReportTabMenu  .btn:hover:before,#modalBodyviewReportContentPanelOpticalPower .btn:hover:before {
+    -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#modalBodyviewReportTabMenu .btn:hover , #modalBodyviewReportContentPanelOpticalPower .btn:hover{
+	    background: none;
+	    color:white;
+	    border-color:#77bda0;
+	   /*  box-shadow:2px 2px 5px #777; */
+	    transition: border-color 0.3s, color 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+
+#modalBodyviewReportTabMenu .btn:focus , #modalBodyviewReportContentPanelOpticalPower .btn:focus{
+	    color:white;
+}
+
+
+.viewReportRowBkgColor1{
+	background-color: #dff0d8;
+}
+
+.viewReportRowBkgColor2{
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+}
+
+.modalBodyviewReportContentPanelwavelengthConfiTable tbody label{
+	margin:10px;
+}
+
+.modalBodyviewReportContentPanelwavelengthConfiTable{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.modalBodyviewReportContentPanelwavelengthConfiTable th{
+	text-align: center;
+}
+
+
+ .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: none;
+} 
+
+
+.modalBodyviewReportContentPanelviewNodeReportTable>tbody>tr>td{
+	border:1px solid #ecedee;
+}
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+.modalBodyviewReportContentPanelviewNodeReportTable tbody label{
+	margin:10px;
+}
+
+.modalBodyviewReportContentPanelviewNodeReportTable{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.modalBodyviewReportContentPanelwavelengthConfiTable th{
+	text-align: center;
+}
+
+.modalBodyviewReportContentPanelviewLinkReportTable>tbody>tr>td{
+	border:1px solid #ecedee;
+}
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+.modalBodyviewReportContentPanelviewLinkReportTable tbody label{
+	margin:10px;
+}
+
+.modalBodyviewReportContentPanelviewLinkReportTable{
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+
+
+.modalBodyviewReportContentPanelCablingDiagramTable tbody label{
+	margin:10px;
+}
+
+.modalBodyviewReportContentPanelCablingDiagramTable{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.modalBodyviewReportContentPanelCablingDiagramTable th{
+	text-align: center;
+}
+
+#viewReportModal .genericModalBodyContentPanel table{
+	font-weight: bolder;
+}
+
+#viewReportModal .genericModalBodyHeadPanel{
+	display:flex;
+	    padding: 0px;;
+}
+
+.viewReportInputForm{
+	    /* border: 2px solid #dddddd; 
+    padding: 63px;*/
+    background: #e4f0dd;
+}
+
+.viewReportInputFormDiv{
+	flex: 0.25;
+    background: #e4f0dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewReportInputForm select{
+	border:none;
+}
+
+.label-card{
+	margin: 0.5rem;
+    float: left;
+    min-width: 12rem;
+    text-align: center;
+}
+
+.label-card-title{
+	    margin: 0px;
+    background: #f7f7f6;
+    color: #777777;
+    padding: 0px 10px;
+}
+
+.label-card-text{
+	    margin: 0px;
+    background: #e4f0dd;
+    color: #5f667a;
+    padding: 4px;
+    font-weight: bolder;
+}
+
+.label-card--networkInfo{
+	margin: 2px;
+    float: left;
+    text-align: center;
+}
+
+.label-card-title--networkInfo{
+    background: #f7f7f6;
+    color: #777777;
+    padding: 0px 10px;
+    font-size: 10px;
+    margin: 0px;
+}
+
+.label-card-text--networkInfo{
+    background: #e4f0dd;
+    color: #5f667a;
+    padding: 4px;
+    font-weight: bolder;
+     font-size: 24px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+.big-number {
+	font-weight: 1000;
+	font-size: 50px;
+	/* color:#3c763d; */
+}
+
+.node-info-div-view-report{
+    /*  border: 2px solid #e4f0dd; */
+    /* padding: 5px 53px; */
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+#modalBodyviewReportContentPanelOpticalPower .btn{
+	width:40%;
+}

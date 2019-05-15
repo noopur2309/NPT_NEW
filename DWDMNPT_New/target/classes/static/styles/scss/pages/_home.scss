@@ -1,0 +1,69 @@
+// .section-about{
+//     background:$about-section-color;
+//     padding-top: 25vh;
+//     padding-bottom: 50vh;
+//     margin: -20vh auto;
+// }
+
+// .section-feature{
+//     background-image: linear-gradient(to right top,rgba($primary-color-dark,0.8),rgba($primary-color-light, 0.5)),
+//                       url('../../imgs/gym-girl.jpg');
+//     height: 100vh;
+//     padding: 15rem 0;
+//     background-size: cover;
+//     background-position: center;
+//     // clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+
+//     transform: skewY(-7deg);
+
+//     //Select 'all direct children' of parent selector
+//     & > *{
+//         transform: skewY(7deg); 
+//     }
+// }
+
+// .section-price{
+//     @extend .section-about;
+//     padding-top: 50vh;
+//     padding-bottom: 15vh;
+// }
+
+// .section-stories{
+//     padding: 2.5rem 0;
+//     position: relative;
+//     background: none;
+//     margin-top: 12.5rem;
+// }
+
+.overlay-container{
+	@include overlayContainer; 
+}
+
+#canvasIdContainer {
+    /* width:61%; */
+    overflow: hidden;
+  }
+  
+  #canvasId {
+    /* border: 2px solid grey; */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJod…N0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=);
+    // float: left;
+    width: 100%;
+    height: 76rem;
+    position: relative;
+    /* overflow: auto; */
+  }
+  
+.toolbar-menu {
+    /* background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); */
+    /*  background: url(../images/whirlpool.png) center; */
+    min-height: 4rem;
+    box-shadow: 0px .2rem 1rem #e5e5e5;
+    color: #333;
+    font-weight: bolder;
+	padding: 1.2rem 1rem;
+	
+	.nav > li > a {
+		padding: 5px 5px;
+	}
+  }

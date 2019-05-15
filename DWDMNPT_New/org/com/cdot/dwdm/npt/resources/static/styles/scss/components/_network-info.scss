@@ -1,0 +1,83 @@
+.network-details {
+  width: 45%;
+  margin: 2% 2.5%;
+  margin-bottom: 1rem;
+  border: 0.1rem solid #f0f0f0;
+  text-align: center;
+  box-shadow: $box-shadow-card;
+  float: left;
+
+  //Name Field
+  &:first-child {
+    width: 95%;
+  }
+
+  &__label {
+    color: $secondary-color-dark;
+    font-size: 1.2rem;
+  }
+
+  &__content {
+    color: $color-label-text;
+    // font-weight: bolder;
+    font-size: 2.2rem;
+  }
+}
+
+.count-box {
+  margin: 0.2rem 0px !important;
+  width: 50%;
+  /* display: flex; */
+  border: 0.1rem solid #e2e2e2;
+}
+
+.label-card {
+  margin: 0.5rem;
+  float: left;
+  min-width: 12rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.label-card-title {
+  margin: 0px;
+  background: $color-white;
+  color: $color-black;
+  padding: 0px 10px;
+  // border: 2px solid $color-black;
+  font-size: 1.2rem;
+}
+
+.label-card-text {
+  margin-top: 4px;
+  background: $color-white;
+  color: $color-label-text;
+  padding: 2px;
+  font-weight: bolder;
+  // font-size: 1.5rem;
+  // border: 1px solid $secondary-color;
+}
+
+.label-card--networkInfo {
+  margin: 2px;
+  float: left;
+  text-align: center;
+}
+
+.label-card-title--networkInfo {
+  background: #f7f7f6;
+  color: #777777;
+  padding: 0px 10px;
+  font-size: 10px;
+  margin: 0px;
+}
+
+.label-card-text--networkInfo {
+  background: #e4f0dd;
+  color: #5f667a;
+  padding: 4px;
+  font-weight: bolder;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}

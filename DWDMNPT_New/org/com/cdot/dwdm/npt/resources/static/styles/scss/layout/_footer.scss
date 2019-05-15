@@ -1,0 +1,54 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  .row {
+    background: #5cb888;
+  }
+  p {
+    color: #e5e5e5;
+    // font-weight: 900;
+  }
+
+  // .minmaxCon {
+  //   z-index: 2050;
+  //   position: relative;
+  // }
+}
+
+.maximize-container {
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  color: white;
+  font-weight: 100;
+  border-radius: 1rem;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+
+  & * {
+    padding: 0 0.3rem;
+    color: white;
+    font-size: 1rem;
+  }
+
+  // &:hover {
+  //   color: white;
+  // }
+
+  span {
+    flex-grow: 3;
+  }
+
+  button {
+    color: white;
+    cursor: pointer;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,57 @@
+// Colors
+
+//Green
+$primary-color: #5cb888;
+$primary-color-light: #81e0ae;
+$primary-color-dark: #00a44c;
+
+//Grey
+$secondary-color: #3f3f3f1a;
+$secondary-color-light: #f5f4f4;
+$secondary-color-dark: rgb(216, 216, 216);
+
+$tertiary-color-light: #004e92;
+$tertiary-color-dark: #000428;
+
+$about-section-color: #f7f5f9;
+$feature-card-color: rgb(247, 243, 243);
+
+$text-color-gray-dark: #777;
+$text-color-gray-light: rgb(235, 235, 235);
+
+$shadow-color: rgba($secondary-color-light, 0.5);
+
+$color-white: rgb(255, 255, 255);
+
+$color-black: #1e272e;
+$color-gray: #4b4b4b;
+$color-gray-light: #919191;
+$color-label-text: #222138;
+
+$overlay-bkg-color: #d5d5d5e6;
+
+$color-danger: #e23934;
+$color-danger-hover: #c54441;
+$color-warning: #f6b93b;
+$color-warning-hover: #e9a213;
+$color-success: #78e08f;
+$color-success-hover: #6eca82;
+$color-default: #57606f;
+$color-default-hover: #65696e;
+
+$color-working: #bdbdbd;
+$color-protection: #e0e0e0;
+$color-restoration-one: #eeeeee;
+$color-restoration-two: #f5f5f5;
+$path-colors: #4db6ac #80cbc4 #b2dfdb #e0f2f1;
+
+// Preference selection buttons
+$color-priority-selected:blue;
+$color-priority:black;
+
+
+//Shadow
+$box-shadow-card: 0 0.5rem 1rem $shadow-color;
+
+//Fonts
+$default-font-size: 1.4rem;

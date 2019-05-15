@@ -1,0 +1,180 @@
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+
+    50%{
+       transform: translateX(1rem);
+       opacity: 0.5;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom{
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/*Animate Top  */
+@-webkit-keyframes animatetop {
+    from {
+      top: -30rem;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes animatetop {
+    from {
+      top: -30rem;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+/*Animate Top Ends  */
+
+/*Blink Animation */
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }  
+  
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }  
+  
+  @-moz-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+/*Blink Animation */
+
+  /* Spin Animation */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+  
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* The animation code */
+  // @keyframes headingAnimation {
+  //   0% {
+  //     margin-left: 0%;
+  //     font-weight: 100;
+  //   }
+  
+  //   10% {
+  //     margin-left: 10%;
+  //     font-weight: 400;
+  //   }
+  
+  //   20% {
+  //     margin-left: 20%;
+  //     font-weight: 700;
+  //   }
+  
+  //   30% {
+  //     margin-left: 30%;
+  //     font-weight: 100;
+  //   }
+  
+  //   40% {
+  //     margin-left: 40%;
+  //     font-weight: 400;
+  //   }
+  
+  //   50% {
+  //     margin-left: 50%;
+  //     font-weight: 700;
+  //   }
+  
+  //   60% {
+  //     margin-left: 40%;
+  //     font-weight: 100;
+  //   }
+  
+  //   70% {
+  //     margin-left: 30%;
+  //     font-weight: 400;
+  //   }
+  
+  //   80% {
+  //     margin-left: 20%;
+  //     font-weight: 100;
+  //   }
+  
+  //   90% {
+  //     margin-left: 10%;
+  //     font-weight: 100;
+  //   }
+  
+  //   100% {
+  //     margin-left: 0%;
+  //     font-weight: 100;
+  //   }
+  // }

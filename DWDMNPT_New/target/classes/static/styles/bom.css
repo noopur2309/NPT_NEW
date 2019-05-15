@@ -1,0 +1,462 @@
+.genericModalBodyHeadPanel {
+	 /* border-bottom: 2px solid #33b573;
+	margin-bottom: 20px;  */
+	padding: 15px;
+	 background-color: #fff; 
+	color: #333;
+	/* background: rgba(192,194,194,1);
+background: -moz-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(192,194,194,1)), color-stop(59%, rgba(133,137,138,1)), color-stop(100%, rgba(177,179,179,1)));
+background: -webkit-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -o-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -ms-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: linear-gradient(to right, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c2c2', endColorstr='#b1b3b3', GradientType=1 ); */
+}
+
+/* #modalBodyCablingHeadPanel{
+	border-bottom: 2px solid grey;
+} */
+
+.modal-body__header{
+	background: rgba(0,0,0,.075);
+    padding-bottom: 4rem;
+    clip-path: polygon(0 0,100% 0%,100% 80%,0 100%);
+}
+
+.genericModalBodyContentPanel table thead {
+	background:#5f657a;
+	cursor: s-resize;
+	  
+}
+
+/* .genericModalBodyHeadPanelHeading button{
+	background-color: transparent;
+	border: none;
+	color: white;
+} */
+
+.modal-content {
+    position: relative;
+    /* background-color: #eee; */
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    padding: 20px;
+}
+
+.modal-header{
+  cursor: move;
+}
+
+.genericModalContent{
+	padding:0px;
+}
+
+.genericModalBody{
+	   padding: 0px 15px 0px 15px;
+}
+
+.genericModalFooter {
+	background-color: #eee;
+	/* border-top: 5px solid #33b573; */
+	/*  box-shadow: 0px -3px 7px #c4c4c4; */
+}
+
+#modalBodyBomHeadPanel p {	
+	color: #777;
+}
+
+#modalBodyBomHeadPanel p span {
+	font-weight: bolder;
+	color: #244824;
+}
+
+.genericModalBodyHeadPanelHeading{
+	background: linear-gradient(to right top, #f5f5f5ad, #f5f5f5cc), url(../images/whirlpool.png);
+    background-size: cover;
+    /* background: #353b41ed; */
+    padding-left: 14px;
+    position: relative;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    /* box-shadow: 0px 3px 10px darkgreen; */
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    z-index: 1050;
+    box-shadow: 0px 5px 8px #ccc;
+}
+
+.genericModalBodyHeadPanelHeading p{
+	color: #5d5d5d;
+    font-weight: 900;
+    font-size: 1.8rem;
+    display: inline-block;
+    border-bottom: .3rem solid #5bb887;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+.genericModalTabMenuPanel{
+	   /* border-bottom:  2px solid #777; */
+    text-align: center;
+    /* margin-bottom: 16px; */
+    padding: 8px 0;
+    background: #abbaab;
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, rgba(173, 183, 169, 0.2), rgba(171, 186, 171, 0.24));
+        /* box-shadow: 0px -3px 7px #c4c4c4; */
+}
+
+/* .genericModalTabMenuPanel */ .nav-pills li a{
+	-webkit-transition: color 300ms;
+    transition: color 300ms,border-color 0.3s;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bolder;
+    width: 25%;
+    margin: 5px;
+    /* border: 0.2px solid #283048; */
+    border-radius: 0;
+    padding: 10px 0px;
+}
+
+/* .genericModalTabMenuPanel */.nav-pills a:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #59c38b;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms cubic-bezier(0, 0, 0, 1.18);
+  transition: 300ms cubic-bezier(0, 0, 0, 1.18);
+  border-radius: 25px;
+}
+
+/* .genericModalTabMenuPanel */ .nav-pills a:hover:before{
+    -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* .genericModalTabMenuPanel */ .nav-pills li a{
+	    width: 100%;
+    border: 2px solid #77bda0;
+    border-radius: 25px;
+    color: #333;
+    background-color: #ecf0ec;
+}
+
+ .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #5cb888; 
+	/* background: linear-gradient(to right, #5cb888, #007991); */
+	color: white;
+	border-radius: 25px;
+}
+
+/* .genericModalTabMenuPanel */ .nav-pills li.active{
+	
+}
+
+/* /* .genericModalTabMenuPanel */ .nav-pills li a:hover{
+	color:white;
+}
+ */
+
+/* .genericModalTabMenuPanel */ .nav-pills a:hover{
+	    background: none;
+	    color:white;
+	    border-color:#77bda0;
+	   /*  box-shadow:2px 2px 5px #777; */
+	    transition: border-color 0.3s, color 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* .genericModalTabMenuPanel */ .nav-pills li{
+	border:none;
+	display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.zeroPadding{
+	padding:0;
+}
+
+.genericModalDialog{
+	width:65%;
+}
+
+
+#modalBodyBomContentPanelEquipment, #modalBodyBomContentPanelEquipmentPref{
+	display:none;
+}
+
+#modalBodyBomTabMenu{
+	/* border-bottom:  2px solid #777; */
+    text-align: center;
+    /* margin-bottom: 16px; */
+    padding: 8px 0;
+          background: #abbaab;
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    background: linear-gradient(to right, rgba(173, 183, 169, 0.2), rgba(171, 186, 171, 0.24));
+        /* box-shadow: 0px -3px 7px #c4c4c4; */
+}
+
+#modalBodyBomTabMenu .btn{
+  -webkit-transition: color 300ms;
+    transition: color 300ms,border-color 0.3s;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bolder;
+    width: 25%;
+    margin: 5px;
+    /* border: 0.2px solid #283048; */
+    border-radius: 0;
+    padding: 10px 0px;
+}
+
+#modalBodyBomTabMenu .btn:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #77bda0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+#modalBodyBomTabMenu .btn:hover:before {
+    -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#modalBodyBomTabMenu .btn:hover{
+	    background: none;
+	    color:white;
+	    border-color:#77bda0;
+	   /*  box-shadow:2px 2px 5px #777; */
+	    transition: border-color 0.3s, color 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+        transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.activeFocus{
+    background: #77bda0;
+    color: #f5f5f5;
+    /* box-shadow: 2px 2px 5px #777; */
+    text-shadow: 3px 2px 4px black;
+}
+
+#modalBodyBomTabMenu .btn:focus{
+	    color:white;
+}
+
+.genericModalBodyContentPanel{
+	    max-height: 490px;
+    overflow: auto;
+    padding-top: 20px;
+    border-top: 2px solid #e8e8e8;
+    background: white;
+}
+    
+.half-div{
+	    width: 49%;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(102, 173, 59, 0.18);
+}
+
+.bomRowBkgColor1{
+	background-color: #dff0d8;
+}
+
+.bomRowBkgColor2{
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+}
+
+.modalBodyBomContentPanelEquipmentPrefTable tbody label{
+	margin:10px;
+}
+
+.modalBodyBomContentPanelEquipmentPrefTable{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.modalBodyBomContentPanelEquipmentPrefTable th{
+	text-align: center;
+}
+
+ .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: none;
+} 
+
+.modalGenericTable th{
+	text-align: center;
+}
+
+.modalGenericTable{
+	font-weight: bolder;
+	text-align: center;
+}
+
+.cardPrefAlerttextImage{
+	width:80px;
+	height:80px;
+}
+
+
+#cablingInputForm .form-group{
+	margin:5px;
+}
+
+.modalBodyCablingContentPanelBomTable>tbody>tr>td{
+	border:1px solid #ecedee;
+}
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+.npt-form-inline-container{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.npt-form-inline .form-group{
+	       margin: 5px;
+    /* width: 15%; */
+    border: 0px solid #5f657a;
+    /* background: rgb(221, 221, 221); */
+}
+
+.npt-form-inline .form-group *{
+	width: 100%;
+    text-align: -webkit-center;
+    border-radius: 0px;
+}
+
+.npt-form-inline .form-group i{
+	width: auto;
+    text-align: -webkit-center;
+    border-radius: 0px;
+}
+
+.npt-form-inline .form-group label{
+	display: block;
+    color: #5f657a;
+}
+
+.npt-form-inline .form-group select{
+	    border: none;
+    background: #f5f5f5;
+}
+
+.npt-form-inline .form-group .btn{
+	border: none;
+    /* background: #5f657a;
+     width: 40%; */
+    margin-top: 27px;
+    /* box-shadow: 2px 2px 8px #c4c4c4;
+    color: whitesmoke; */
+    font-weight: bolder;
+}
+
+/* 
+.npt-form-inline .form-group .btn:hover{
+	  transform:scale(0.9,0.9);
+	  background: linear-gradient(to right, #2199e0, #337ab7); 
+} */
+
+
+   .min .fa{
+        font-size: 14px; 
+      }
+
+    .min .menuTab{display: none;}
+
+  .min .modal-dialog, .min .modal-content{
+        height: 100%;
+        width: 100%;
+        margin: 0px !important;
+        padding: 0px !important; 
+      }
+
+    .min .modal-header{
+        height: 100%;
+        width: 100%;
+        margin: 0px !important;
+        /* padding: 3px 5px !important;  */
+      }
+      
+      .min .modal-header p{
+      font-size:5px;
+      }
+      
+    .min .genericModalBodyHeadPanelHeading{
+    background: #007991;
+    background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+    background: linear-gradient(to right, #5cb888, #007991);
+    /* padding-left: 14px; */
+    position: relative;
+    padding-top: 4px;
+    /* margin-bottom: 15px; */
+    /* box-shadow: 0px 3px 10px darkgreen; */
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    z-index: 1050;
+    /* box-shadow: 0px 5px 8px #777; */
+    }

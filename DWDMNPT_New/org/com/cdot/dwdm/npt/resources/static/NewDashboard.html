@@ -1,0 +1,850 @@
+
+    <html lang="en">
+
+    <head>
+        <title>Dashboard | NPT</title>
+          <meta charset="utf-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+            <meta content="Themesdesign" name="author" />
+
+      
+       
+   
+
+     <!-- VENDOR CSS -->
+        <link rel="stylesheet" href="newassets/vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="newassets/vendor/font-awesome/css/font-awesome.min.css">
+    
+        <link rel="stylesheet" href="newstyle/otput/dashboard.css">
+
+    
+
+        </head>
+      <body class="layout-fullwidth">
+      
+
+                  <!-- START Header -->
+         <header id="header" class="page-topbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+         <a class="navbar-brand" href="#">
+      <img src="newassets/logo.png" alt="NPT">
+    </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+       <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+
+
+           <li class="dropdown">
+               <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-bell"></span></a>
+              <ul class="dropdown-menu notifications">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+
+
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-envelope"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span></a>
+              <ul class="dropdown-menu">
+
+               <li><a href="#"><i class="glyphicon glyphicon-user"></i> <span>My Profile</span></a></li>
+               <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> <span>Message</span></a></li>
+               <li><a href="#"><i class="glyphicon glyphicon-cog"></i> <span>Settings</span></a></li>
+               <li><a href="#" data-toggle="modal" data-target="#exampleModal"><i class="glyphicon glyphicon-off"></i> <span>Logout</span></a></li>
+             
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+     <!-- /.container-fluid -->
+    </nav>
+       </header>
+            <!-- second fixed navbar-->
+
+      <div class="container">
+
+
+
+          <ul class="nav nav-tabs" role="tablist">
+
+           <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+
+
+
+       <!--      <li><a href="" class="active2" data-toggle="tab">Network</a></li> -->
+  
+
+          </ul>
+   
+   
+         <!-- END HEADER -->           
+
+            <!-- MAIN -->
+
+                <!-- MAIN CONTENT -->
+
+        <!-- START WRAPPER -->
+
+                <div class="tab-content">
+
+                        <!-- card panel-->
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                             <div class="panel panel-headline">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">Dashboard/Admin</h3>
+                          <a href="#" class="pull-right">Refresh <i class="glyphicon glyphicon-refresh" aria-hidden="true"></i></a>
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">View All Networks</a>
+                            </div>
+
+
+                             <div class="scroll">
+                             <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                      <div class="card">
+                                             <img class="card-img-top img-responsive" src="newassets/add.jpeg.png" alt="add">
+                                               <div class="card-body">
+                                               <a href="#" class="btn btn-success" data-toggle="modal" data-target="#myModal" id="createNewNetwork">Create New Network</a>
+                                            <p>
+    <!--											<span class="number">35%</span>-->
+    <!--											<span class="title">Create New Network</span>-->
+    <!--                                             <a href="#" class="btn btn-primary">Create New Network</a>-->
+                                            </p>
+                                       </div>
+                                       </div>
+                                    </div>
+
+
+                        <!--<div class="col-md-3">
+
+            <div class="card  green-field-card">
+                    <img class="card-img-top img-responsive" src="newassets/MeshTopology.png"  alt="Sans &amp; Sans-Serif">
+                   <a>
+                 <div class="mask rgba-white-slight"></div>
+                </a>
+
+            Card content
+            <div class="card-body card-body-cascade text-center">
+
+   
+          <a href="#"  class="btn btn-success">Open Map</a>
+    
+          <br>
+            <a href="#" class="OpenMap" title="OpenMap" data-toggle="tooltip"><i class="glyphicon glyphicon-eye-open"> </i></a>
+            <a href="#" class="Clone" title="Clone" data-toggle="tooltip"><i class="glyphicon glyphicon-pencil"> </i></a>
+            <a href="#" class="Delete" title="Delete" data-toggle="tooltip"><i class="glyphicon glyphicon-trash"> </i></a>
+            </div>
+            </div>
+                        </div> -->
+           
+                                </div>
+  
+                         
+
+                                </div>
+    <!--                             panel-body end-->
+
+                                 </div>
+    <!--                        panel end-->
+                           <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 24 hours</span></div>
+                                            <div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Networks</a></div>
+                                        </div>
+                                    </div>
+
+                            </div>
+                          
+
+
+
+    <!--                    graph panel-->
+                           <div class="row">
+                            <div class="col-md-6">
+ 
+                       
+
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">NetworkWise Power Distribution</h3>
+     </div>
+                                         <canvas id="myLineChart"></canvas>
+                                         
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                              <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">NetworkWise Price Distribution</h3>
+
+                                    </div>
+                                      <canvas id="mybarChart"></canvas>
+                                </div>
+
+                                </div>
+                            </div>
+                      
+                                
+                        <!-- END OVERVIEW -->
+                        <div class="row">
+                            <div class="col-md-12">
+ 
+                                <!-- RECENT PURCHASES -->
+
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Recent Networks</h3>
+    
+<!--
+                                        <div class="right">
+                                            <button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+                                            <button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+                                        </div>
+-->
+    
+                                    </div>
+                                   <div class="panel-body no-padding">
+                                         <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+       <tr>
+                                                    <th>Name</th>
+                                                    <th>State</th>
+                                                    <th>Cost</th>
+                                                    <th>Date &amp; Time</th>
+                                                    <th>Topology</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                </tr>
+    </thead>
+<!--     <tbody id="myTable">
+              <tr class="success">
+                                                   <td><a href="#">abc</a></td>
+                                                    <td>GreenField</td>
+                                                    <td>$122</td>
+                                                    <td>Oct 21, 2016</td>
+                                                    <td>Mesh</td>
+                                                    <td><span class="label label-success">COMPLETED</span></td>
+                                                    <td>
+    <a href="#" class="OpenMap" title="OpenMap" data-toggle="tooltip"><i class="glyphicon glyphicon-eye-open"> </i></a>
+    <a href="#" class="Clone" title="Clone" data-toggle="tooltip"><i class="glyphicon glyphicon-pencil"> </i></a>
+    <a href="#" class="Delete" title="Delete" data-toggle="tooltip"><i class="glyphicon glyphicon-trash"> </i></a>
+                            </td>
+                                                </tr>
+            <tr class="info">
+                                                   <td><a href="#">abc</a></td>
+                                                    <td>GreenField</td>
+                                                    <td>$122</td>
+                                                    <td>Oct 21, 2016</td>
+                                                    <td>Mesh</td>
+                                                    <td><span class="label label-success">COMPLETED</span></td>
+                                                    <td>
+    <a href="#" class="OpenMap" title="OpenMap" data-toggle="tooltip"><i class="glyphicon glyphicon-eye-open"> </i></a>
+    <a href="#" class="Clone" title="Clone" data-toggle="tooltip"><i class="glyphicon glyphicon-pencil"> </i></a>
+    <a href="#" class="Delete" title="Delete" data-toggle="tooltip"><i class="glyphicon glyphicon-trash"> </i></a>
+                            </td>
+                                                </tr>
+       <tr class="warning">
+                                                    <td><a href="#">cdot</a></td>
+                                                    <td>GreenField</td>
+                                                    <td>$34</td>
+                                                    <td>Oct 18, 2016</td>
+                                                    <td>Hub Ring</td>
+                                                    <td><span class="label label-danger">FAILED</span></td>
+                                                     <td>
+    <a href="#" class="OpenMap" title="OpenMap" data-toggle="tooltip"><i class="glyphicon glyphicon-eye-open"> </i></a>
+     <a href="#" class="Clone" title="Clone" data-toggle="tooltip"><i class="glyphicon glyphicon-pencil"> </i></a>
+      <a href="#" class="Delete" title="Delete" data-toggle="tooltip"><i class="glyphicon glyphicon-trash"> </i></a>
+                            </td>
+                                                </tr>
+                                                <tr class="danger">
+                                                    <td><a href="#">network</a></td>
+                                                    <td>GreenField</td>
+                                                    <td>$186</td>
+                                                    <td>Oct 17, 2016</td>
+                                                    <td>Linear</td>
+                                                    <td><span class="label label-success">SUCCESS</span></td>
+                                                     <td>
+    <a href="#" class="OpenMap" title="OpenMap" data-toggle="tooltip"><i class="glyphicon glyphicon-eye-open"> </i></a>
+     <a href="#" class="Clone" title="Clone" data-toggle="tooltip"><i class="glyphicon glyphicon-pencil"> </i></a>
+     <a href="#" class="Delete" title="Delete" data-toggle="tooltip"><i class="glyphicon glyphicon-trash"> </i></a>
+                            </td>
+                                                </tr>
+    </tbody> -->
+  </table>
+                                    </div>
+    
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-md-6"><span class="panel-note"><i class="fa fa-clock-o"></i> Last 24 hours</span></div>
+                                            <div class="col-md-6 text-right"><a href="#" class="btn btn-primary">View All Networks</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- END RECENT PURCHASES -->
+                            </div>
+
+                        </div>
+
+    <!--                bar chart start-->
+                    <div class="row">
+                            <div class="col-md-12">
+<!--
+                                    <div class="panel">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">NetworkWise Price Distribution</h3>
+
+                                    </div>
+                                     <div class="app3">
+	                                          <bar-chart></bar-chart>
+                                                </div>
+                                </div>
+-->
+
+                                       <div class="panel">
+                                        <div class="panel-heading">
+                                        <h3 class="panel-title">NetworkWise Network Elements</h3>
+
+                                    </div>
+                                         <canvas id="mypieChart"></canvas>
+                 
+                                      
+                          
+ 
+
+                                    </div>
+
+                        </div>
+                    </div>
+
+    <!--                bar chart ends-->
+
+                        <div class="row">
+                    <div class="col-md-12">
+                            <!-- contact us -->
+     <div class="panel">
+          <div class="panel-heading">
+      <h3 class="panel-title">NetworkWise Network Elements</h3>
+      <div id="map-canvas"></div>
+        </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+                        <div class="row">
+                    <div class="col-md-12">
+
+                     <div class="panel-heading">
+      <h3 class="panel-title">Contact Us</h3>
+
+        </div>   
+        <form method="post" action="contact.php" name="contactform" id="contactform">
+          <div class="col-md-6">
+            <fieldset>
+              <input name="name" type="text" id="name" size="30" placeholder="Name">
+              <br>
+              <input name="email" type="text" id="email" size="30" placeholder="Email">
+              <br>
+              <input name="phone" type="text" id="phone" size="30" placeholder="Phone">
+              <br>
+              <input name="human" type="text" id="human" size="30" placeholder="Prove your not a robot... What is 2+2?">
+              <br>
+            </fieldset>
+          </div>
+          <div class="col-md-6">
+            <fieldset>
+              <textarea name="comments" cols="40" rows="20" id="comments" placeholder="Message"></textarea>
+            </fieldset>
+          </div>
+          <div class="col-md-12">
+            <fieldset>
+              <button type="submit" class="btn btn-lg" id="submit" value="Submit" style="margin-bottom: 15px;">Send Message</button>
+            </fieldset>
+          </div>
+        </form>
+                </div>
+          </div>
+
+<footer id="footer">
+              
+                    <div class="row">
+                        <div class="col-md-12">
+                    <div class="copyright">
+                  © Copyright <strong>C-DOT</strong>. All Rights Reserved
+                </div>
+                        </div>
+                    </div>
+              
+            </footer>
+
+          
+                    </div> <!--First Panel End-->
+                              
+<!--dashboard content end -->
+      </div>   <!--  tab-content-->
+    
+
+      
+  </div>  <!--  container-->
+
+
+<!-- Modal Start -->
+<!-- Logout Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Select "Logout" below if you are ready to end your current session.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="index.html">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+   
+
+                        <!-- basic modal for create map -->
+   <!--  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4>Create New Network</h4>
+            </div>
+            <div class="modal-body">
+                 <form role="form">
+                <div class="row">
+              <div class="col-sm-6">
+                  <label for="networkname">Network name<span class="requiredField">*</span></label>
+                  <input type="text" class="form-control" id="networkname" placeholder="Enter Network Name">
+                </div>
+                    <div class="col-sm-6">
+                  <label for="nodes">Number of Nodes</label>
+                  <input type="text" class="form-control" id="nodes" placeholder="Enter Nodes">
+                </div>
+                  </div>
+
+                  <div class="row">
+                 <div class="col-sm-6">
+                  <label for="createMapTopology">Network Topology<span class="requiredField">*</span> </label>
+                    <select class="form-control" id="createMapTopology" name="Topology">
+                                                    <option value="Mesh" selected>Mesh</option>
+                                                    <option>Close Ring</option>
+                                                    <option>Hub Ring</option>
+                                                    <option>Linear</option>
+                                                    <option selected="">Mesh</option>
+                                                    <option  value="Closed-Two Fibre Ring">Closed-Two Fibre Ring</option>
+                                                </select>
+                </div>
+
+
+                 <div class="col-sm-6">
+                <label for="createMapCountryCode">CC (Country Code)<span class="requiredField">*</span></label>
+                <select class="form-control" id="createMapCountryCode" name="CountryCode">
+                                                    <option value="Mesh" selected>Mesh</option>
+                                                    <option value="356" selected="">INDIA</option>
+                                                    <option value="840">USA</option>
+                                                    <option value="826">UK</option>
+                                                </select>
+                </div>
+                 </div>
+
+
+                  <div class="row">
+                 <div class="col-sm-6">
+                 <label for="createMapIcc">ICC (ITU-T Carrier Code)<span class="requiredField">*</span></label>
+                    <select class="form-control" id="createMapIcc" name="CarrierCode">
+                                                    <option value="Mesh" selected>Mesh</option>
+                                                    <option selected="">DTS</option>
+                                                    <option>VSNL</option>
+                                                </select>
+                </div>
+
+
+                 <div class="col-sm-6">
+             <label for="createMapUAPCode">UAPC(Unique Access Point Code)<span class="requiredField">*</span></label>
+                <input type="text" class="form-control" name="UniqueCode" onfocus="this.placeholder = ''" placeholder="UAPC" id="createMapUAPCode">
+                </div>
+                 </div>
+
+                     </form>
+
+
+            </div>
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-success btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-book"></span> Create</button>
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger btn-block" data-dismiss="modal"><span class="glyphicon glyphicon-backward"></span> Go To Dashboard</button>
+
+            </div>
+        </div>
+      </div>
+    </div> -->
+    <!--                modal end-->            
+
+
+            <!-- END MAIN -->
+                
+
+   
+            <!-- Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+        <script src=" https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+         
+         <!-- Bootstrap core JavaScript -->
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/popper/popper.min.js"></script>
+<script src="styles/Bootstrap/js/dashboard-bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/dashboard/datatables/jquery.dataTables.js"></script>
+<script src="js/dashboard/datatables/dataTables.bootstrap4.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/globalConstants.js"></script>
+<script src="js/scriptConstants.js"></script>
+ <script src="js/modal/bootbox.min.js"></script>
+<script src="js/dashboard/dashboard.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+    });
+</script>
+
+    
+
+
+
+            <script>
+    /*   var ctx = document.getElementById("myLineChart").getContext('2d');
+
+    var myLineChart = new Chart(ctx, {
+
+     type:'line',
+			data: {
+				labels: ['Network 1', 'Network 2', 'Network 3', 'Network 4', 'Network 5', 'Network 6' ],
+				datasets: [
+					{
+						label: 'Power(db)',
+						backgroundColor: '#2BBBAD',
+						pointBackgroundColor: '#00695c',
+						borderWidth: 1,
+						pointBorderColor: '#00695c',
+						data: [40, 20, 30, 50, 90, 10]
+					}
+]
+            },
+			      options:{
+                            responsive: true,
+                            legend: {
+                                display: true
+                             },
+                            title: {
+                                display: true,
+                                text: 'NetworkWise Power Distribution',
+
+                            },
+                            tooltips: {
+                                mode: "single",
+                                    intersect: true
+                            },
+                                responsive: true,
+
+                            hover: {
+                                mode: 'nearest',
+                                intersect: true
+                            },
+                            scales: {
+                                xAxes: [{
+                                    display: true,
+                                    stacked: true,
+                                    scrollbar: {
+                                         enabled: true
+                                     },
+                                    scaleLabel: {
+                                        display: true,
+
+                                        labelString: 'Network'
+                                    },gridLines: {
+							display: false
+						}
+                                }],
+                                yAxes: [{
+                                    display: true,
+                                    scaleLabel: {
+                                        display: true,
+                                        stacked: true,
+
+                                        labelString: 'Power(db)'
+
+                                    },
+                                    gridLines: {
+							display: true
+						}
+                                }]
+                            },
+               
+				height: 200
+                        }
+		}
+	
+
+)
+    
+
+
+    var caption = document.getElementById("caption");
+
+    var update_caption = function(legend) {
+      labels[legend.text] = legend.hidden;
+
+      var selected = Object.keys(labels).filter(function(key) {
+        return labels[key];
+      });
+
+      var text = selected.length ? selected.join(" & ") : "nothing";
+
+      caption.innerHTML = "The chart is displaying " + text;
+    };
+ */
+   </script>
+
+          
+ <!--            <script>
+            var ctx = document.getElementById("mybarChart").getContext('2d');
+
+    var mybarChart = new Chart(ctx, {
+
+     type:'bar',
+         
+                data:{
+                labels: ["1", "2", "3" ,"4" ,"5" ,"6" ,"7" ,"8"],
+                 datasets: [{
+                  label: 'Total Price',
+                  backgroundColor: "#880e4f",
+                 data:[12,19,20,32,11,12,10,15],
+                     stack:1
+
+                }, 
+                      ]
+                            },
+                             options: {
+                            responsive: true,
+                            legend: {
+                                display: true
+                             },
+                            title: {
+                                display: true,
+                                text: 'Networkwise Price Distribution',
+
+                            },
+                            tooltips: {
+                                mode: "single",
+                                    intersect: true
+                            },
+                                responsive: true,
+
+                            hover: {
+                                mode: 'nearest',
+                                intersect: true
+                            },
+                            scales: {
+                                xAxes: [{
+                                    display: true,
+                                    stacked: true,
+                                    scrollbar: {
+                                         enabled: true
+                                     },
+                                    scaleLabel: {
+                                        display: true,
+
+                                        labelString: 'Total Network'
+                                    }
+                                }],
+                                yAxes: [{
+                                    display: true,
+                                    scaleLabel: {
+                                        display: true,
+                                        stacked: true,
+
+                                        labelString: 'Total Price($)'
+
+                                    }
+                                }]
+                            }
+                        },
+                            
+                        
+                    }
+                 
+                
+ )
+         
+
+        </script> -->
+            
+
+
+<!--Create Button Modal-->
+            <script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#myModal").modal();
+        });
+    });
+    </script>
+
+          
+          
+<!--My Search Table-->
+            <script>
+            $(document).ready(function(){
+                $("#myInput").on("keyup", function() {
+                  var value = $(this).val().toLowerCase();
+                  $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                  });
+                });
+              });
+    </script>
+
+          
+          
+            <script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+          
+            <script>
+     // Regular map
+    function regular_map() {
+        var var_location = new google.maps.LatLng(21.7679,78.8718);
+         var var_location2 = new google.maps.LatLng(23.033863, 72.585022);
+         var var_location3 = new google.maps.LatLng(12.9716,77.5946);
+          var var_location4 = new google.maps.LatLng(28.38,77.12);
+          var var_location5 = new google.maps.LatLng(18.56,74.35);
+          var var_location6 = new google.maps.LatLng(21.10,79.12);
+          var var_location7 = new google.maps.LatLng(23.777176,90.399452);
+        var var_location8 = new google.maps.LatLng(22.5726,88.3639);
+
+
+
+        var var_mapoptions = {
+            center: var_location,
+            zoom:4
+        };
+
+        var var_map = new google.maps.Map(document.getElementById("map-canvas"),
+            var_mapoptions);
+
+        var var_marker = new google.maps.Marker({
+            position: var_location,
+            map: var_map,
+            title: "Network 1"
+        });
+         var var_marker = new google.maps.Marker({
+            position: var_location2,
+            map: var_map,
+            title: "Network 2"
+        });
+         var var_marker = new google.maps.Marker({
+            position: var_location3,
+            map: var_map,
+            title: "Network 3"
+        });
+        var var_marker = new google.maps.Marker({
+            position: var_location4,
+            map: var_map,
+            title: "Network 4"
+        });
+         var var_marker = new google.maps.Marker({
+            position: var_location5,
+            map: var_map,
+            title: "Network 5"
+        });
+        var var_marker = new google.maps.Marker({
+            position: var_location6,
+            map: var_map,
+            title: "Network 6"
+        });
+         var var_marker = new google.maps.Marker({
+            position: var_location7,
+            map: var_map,
+            title: "Network 7"
+        });
+         var var_marker = new google.maps.Marker({
+            position: var_location8,
+            map: var_map,
+            title: "Network 8"
+        });
+    }
+
+    // Initialize maps
+    google.maps.event.addDomListener(window, 'load', regular_map);
+
+
+            </script>
+          
+
+
+        </body>
+    </html>
+
+
+
+
+

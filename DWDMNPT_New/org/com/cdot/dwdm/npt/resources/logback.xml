@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>   
+     <logger name="application.controller.ResourcePlanning" level="DEBUG" />
+     <logger name="application.controller.GenerateLinkWavelengthMap" level="DEBUG" />
+     <logger name="application.controller.InitializeConfigurationData" level="DEBUG" />
+     <logger name="application.controller.GenerateMcsMapping" level="DEBUG" />
+     <logger name="Database" level="DEBUG" /> 
+     <logger name="application.MainMap" level="DEBUG" />
+     <logger name="application.MySqlThread" level="DEBUG" />  
+     <logger name="application.controller.MapWebRwaAlgoExeController" level="DEBUG" /> 
+     <logger name="application.controller.MapWebCircuitInputSave" level="DEBUG" />        
+     <logger name="application.controller.GraphController" level="DEBUG"/>       
+     <logger name="application.controller.MapWebMainController" level="DEBUG" />
+     <logger name="application.controller.MapWebGenerateDataPathConfigFile" level="DEBUG" />     
+</configuration>

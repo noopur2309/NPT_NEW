@@ -1,0 +1,215 @@
+#paper {
+  /****
+   width:100px; 
+   height: 100px; 
+   background:red; 
+   float:left;
+   */
+  background: silver;
+}
+
+#canvasId svg,
+#netelemId svg {
+  z-index: 402;
+}
+
+#canvasId .joint-paper-grid {
+  z-index: 401;
+}
+
+#canvasId .joint-paper-background {
+  display: none;
+}
+
+svg {
+  &#v-2 {
+    /* width:100%; */
+    position: relative;
+  }
+  &:not(:root) {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+#paper-navigator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  width: 30rem;
+  height: 22rem;
+  z-index: 400;
+}
+
+#canvasId .joint-paper.joint-theme-default {
+  background-color: transparent;
+}
+
+.joint-port circle:hover {
+  fill: rgba(92, 184, 92, 0.77);
+  z-index: 2;
+  stroke: rgba(240, 248, 255, 0.5);
+  fill-opacity: 0.8;
+  + {
+    .joint-port-label,
+    .port-label {
+      stroke: black;
+      fill: black;
+    }
+  }
+}
+
+.joint-port-label {
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgba(255, 255, 255, 0);
+  z-index: -1;
+}
+
+.port-label {
+  stroke: rgba(0, 0, 0, 0);
+  fill: rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+/* .port-label{
+      stroke: rgba(0, 0, 0, 0);
+      fill: rgba(255,255,255,0);
+  } */
+
+/* .marker-source,.marker-target{
+      display:none;
+  }
+   */
+
+circle {
+  /* 	background: rgba(149, 188, 222, 0);
+        z-index: 0;
+        stroke: rgba(240, 248, 255, 0);
+        fill-opacity: 0;  */
+  cursor: crosshair;
+}
+
+.joint-paper-background {
+  position: absolute;
+  overflow: auto;
+  width: 100%;
+  z-index: 0;
+}
+
+.joint-cell {
+  pointer-events: auto;
+  position: relative;
+}
+
+.joint-paper {
+  width: 100%;
+}
+
+.connection-wrap:hover {
+  stroke-width: 10;
+}
+
+.element *,
+.link-tools *,
+.marker-arrowheads *,
+.marker-vertices * {
+  vector-effect: non-scaling-stroke;
+  -moz-user-select: none;
+  user-drag: none;
+  position: fixed;
+}
+
+.marker-vertex,
+.marker-vertex-remove-area {
+  display: none;
+}
+
+.element:hover {
+  background-color: #428bca;
+}
+
+/**********************************************************************************
+*****************************Joint-Flash-Message***********************************
+***********************************************************************************/
+.joint-flash-message {
+  .fg {
+    color: $color-white;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.8;
+    border: none;
+    border-radius: 0;
+
+    button {
+      color: $color-white;
+    }
+  }
+
+  &[data-type="info"] .fg {
+    background-color: $color-gray;
+  }
+
+  &[data-type="alert"] .fg {
+    background-color: $color-danger;
+  }
+
+  &[data-type="success"] .fg {
+    background-color: $color-success;
+  }
+
+  &[data-type="warning"] .fg {
+    color: $color-gray;
+    background-color: $color-warning;
+  }
+}
+
+/**********************************************************************************
+*****************************Joint-Dialog********************************************
+***********************************************************************************/
+.joint-dialog {
+  display: block;
+
+  .fg {
+    background-color: $color-white;
+    color: $color-gray;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.9;
+    border-radius: 0;
+
+    button {
+      color: $color-white;
+    }
+  }
+
+  &[data-type="info"] .fg .titlebar {
+    background-color: $color-gray;
+  }
+
+  &[data-type="alert"] .fg .titlebar {
+    background-color: $color-danger;
+  }
+
+  &[data-type="success"] .fg .titlebar {
+    background-color: $color-success;
+  }
+
+  &[data-type="warning"] .fg .titlebar {
+    color: $color-gray;
+    background-color: $color-warning;
+  }
+}
+
+/**********************************************************************************
+*****************************Joint-Halo********************************************
+***********************************************************************************/
+.joint-halo {
+  z-index: 403;
+  .handles {
+  }
+
+  .box {
+    display: none;
+  }
+}

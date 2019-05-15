@@ -1,0 +1,26 @@
+.cell-property-dialog {
+    .modal-content {
+        height: 55rem;
+        overflow: hidden;
+        max-width: 45rem;
+        border-radius: 0;
+        box-shadow: 0 0 2.4rem #8080803d;
+        border: none;
+        .modal-header {
+            padding: 0px;
+            border: none;
+            text-align: -webkit-center;
+            text-align: center;
+            color: $color-gray;
+            font-weight: bolder;
+            h4 {
+                font-size: 2em; // font-family: 'Anton', sans-serif;        
+            }
+        }
+        .modal-body {
+            overflow: auto;
+            height: 38.7rem;
+            border: .2rem solid $secondary-color;
+        }
+    }
+}

@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Network Planning Tool</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+    
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Righteous" rel="stylesheet"> 
+  
+  <!-- Bootstrap CSS File -->
+  <link href="styles/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Libraries CSS Files -->
+  <link href="styles/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="styles/animate-css/animate.min.css" rel="stylesheet">
+  
+  <!-- Main Stylesheet File -->
+  <link href="styles/login/login-main.css" rel="stylesheet">
+  <script src="js/angular.min.js"></script>
+  
+<!-- =======================================================
+  Theme Name: Imperial
+  Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+  Author: BootstrapMade.com
+  Author URL: https://bootstrapmade.com
+======================================================= -->
+</head>
+
+<body ng-app="NptHome">
+  
+<!--==========================
+  Hero Section
+============================-->
+  <section id="hero">
+    
+    <div class="hero-container">
+      <div class="row">
+          <ul class="signInNav pull-right">
+            <li><a id="signIn" data-toggle="modal" data-target="#signInModal">Sign In</a></li>
+            <li><a id="signUp" data-toggle="modal" data-target="#signUpModal">Sign Up</a></li>
+          </ul>
+          <div class="wow fadeIn">
+           <h2 >C-DOT Present's</h2>
+            <div class="hero-logo">
+              <a href="index.html" target="_self"><img src="images/login-img/logo.png" alt="Network Planning Tool Logo"></a>
+            </div>            
+            <h1><span>Network Planning Tool</span></h1>
+            <h2>We will <span class="rotating">create,analyse,plan</span> your network.</h2>
+            <div class="actions">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="#services" class="btn-services">Our Services</a>
+          </div>
+        </div>
+
+
+       <!-- <div class="col-md-4 login-form-div">     
+        <div class="form-container">
+          <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#signIn">Sign In</a></li>
+          <li><a data-toggle="tab" href="#signUp">Sign Up</a></li>
+        </ul>
+
+      <div class="tab-content">
+
+        <div id="signIn" class="tab-pane fade in active">
+          <h3>Sign In to your account.</h3>
+          <form id="login-form">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>href
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-default">Sign In</button>
+        </form>
+        </div>
+
+        <div id="signUp" class="tab-pane fade">
+          <h3>Sign up with NPT</h3>
+          <form id="login-form">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" class="form-control" id="firstName">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        </div>
+        
+      </div>
+
+
+        </div>
+
+
+ 
+       </div> -->
+
+      </div>     
+
+    </div>       
+  </section>
+  
+<!--==========================
+  Header Section
+============================-->
+  
+<!--==========================
+  About Section
+============================-->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">About Us</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">Network Planning Tool is a user-friendly network planner for optimized deployement of DWDM Systems. </p>
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row" style="display: flex;align-items: center;">
+      	<div class="col-md-6 about-content-img">
+         <img alt="Npt Home Page" src="images/login-img/Npt-Home.png" class="img-responsive">
+        </div>
+      
+        <div class="col-md-6 about-content">
+         <!--  <h2 class="about-title">Let's get started....</h2> -->
+          <p class="about-text">
+           NPT adds intelligence and automation to DWDM optical network by providing a comprehensive set of engineering, planning and analysis functions for DWDM networks. With a highly user-friendly GUI , NPT makes network planning a piece of cake even with most complex of configurations .  
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!--==========================
+  Services Section
+============================-->
+  <section id="services">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Features</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">NPT provides you with a wide variety of planning features, thus helping you in deploying an optimised and cost-effective network.</p>
+        </div>
+      </div>
+        
+      <div class="row">
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-desktop"></i></div>
+          <h4 class="service-title"><a href="">Map Creation</a></h4>
+          <p class="service-description">Create your own map using our interactive drawing board with functionalities like drag&drop , mouse/keyboard interaction and a handful of more events to support your map creation task. </p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-bar-chart"></i></div>
+          <h4 class="service-title"><a href="">Circuit Processing</a></h4>
+          <p class="service-description">After you create your map , you can generate traffic by giving circuits as input to RWA algorithm. You can set protection type , path type , protection mechanism ,etc using circuits tab. </p>
+        </div>       
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-photo"></i></div>
+          <h4 class="service-title"><a href="">RWA Algorithm</a></h4>
+          <p class="service-description">Routing and Wavelength Assignment algorithm feeds our planning tool with optimized processing and thus helps you in generating the most efficient network.  </p>
+        </div>
+        </div>
+        <div class="row`                                           ```` ``````````````````````````">
+         <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
+          <h4 class="service-title"><a href="">Fault Analysis</a></h4>
+          <p class="service-description">After you have network routes , you can analyze your network for faults with our interactive fault analysis feature. You can generate faults on nodes and links .</p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-road"></i></div>
+          <h4 class="service-title"><a href="">Manage/View Reports</a></h4>
+          <p class="service-description">NPT has different views for detailed tabular information . You can easily download pdf versions of Bill of Material , Inventory , Optical Data,etc.   </p>
+        </div>
+        <div class="col-md-4 service-item">
+          <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
+          <h4 class="service-title"><a href="">Brown Field </a></h4>
+          <p class="service-description">After you deploy the network , you can reconfigure your network using NPT for optimized changes in case of addition ,removal or modification of nodes/links. </p>
+        </div>
+      </div>
+    </div>  
+  </section>
+  
+<!--==========================
+  Subscrbe Section
+============================-->  
+<!--  <section id="subscribe">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-8">
+          <h3 class="subscribe-title">Subscribe For Updates</h3>
+          <p class="subscribe-text">Join our 1000+ subscribers and get access to the latest tools, freebies, product announcements and much more!</p>
+        </div>
+        <div class="col-md-4 subscribe-btn-container">
+          <a class="subscribe-btn" href="#">Subscribe Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ -->  
+
+<!--==========================
+  Team Section
+============================-->    
+  <section id="team">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Our Team</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">We are led by a team that constantly questions,tinkers and challenges to unlock great creativity around every turn.</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Sarbari Naskar</h4>
+            <span>Project Lead</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Sunaina Dung</h4>
+            <span>Backend / Datasbase Management</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Hiten Patel</h4>
+            <span>Backend & Frontend Developer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Avinash Dangi</h4>
+            <span>Backend & Frontend Developer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+         <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Akshay Dawar</h4>
+            <span>Backend Developer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+         <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Manavdeep Singh</h4>
+            <span>Frontend Developer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="member">
+            <div class="pic"><img src="images/login-img/user_profile.jpg" alt=""></div>
+            <h4>Surya Teja</h4>
+            <span>Backend Developer</span>
+            <div class="social">
+              <a href=""><i class="fa fa-twitter"></i></a>
+              <a href=""><i class="fa fa-facebook"></i></a>
+              <a href=""><i class="fa fa-google-plus"></i></a>
+              <a href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        
+      </div>  
+    </div>
+  </section>
+    
+<!--==========================
+  Contact Section
+============================--> 
+  <section id="contact">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Contact Us</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">We are always there to assist you , ping us</p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-3 col-md-push-2">
+          <div class="info">
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p>C-DOT Campus , Mehrauli , New Delhi , 110030</p>
+            </div>
+            
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p>npt@cdot.in</p>
+            </div>
+            
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 XXXXXXXX</p>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="col-md-5 col-md-push-2">
+          <div class="form">
+            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="contact-name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="contact-email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="contact-subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+<!--==========================
+  Footer
+============================--> 
+  <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright">
+              &copy; Copyright <strong>C-DOT</strong>. All Rights Reserved
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer><!-- #footer -->
+  
+  
+  <!-- Modal -->
+<div id="signInModal" class="modal fade" role="dialog" ng-controller="loginController">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">NPT - Sign In</h4>
+      </div>
+      <div class="modal-body">
+        <p class="text-center">Not registered? <a href="#"  id="signInToSignUp" data-toggle="modal" data-target="#signUpModal">Sign Up</a>.</p>
+          <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" ng-model="username" ng-change="userNameValidate" required>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" ng-model="password" required>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div>
+           <div class="alert alert-danger alert-dismissable" ng-show="formInvalid">
+			  <a href="#" class="close" aria-label="close" ng-click="formInvalid=!formInvalid">&times;</a>
+			  	 <strong> ! Please enter valid login details </strong>
+		 </div>
+          
+          <button type="button" class="btn btn-default btn-lg btn-block"  ng-click="loginRequest()">Sign In</button>
+        </form>
+        <div class="loginError text-center"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ <!-- Modal Ends-->
+ 
+   <!-- Modal -->
+ <div id="signUpModal" class="modal fade" role="dialog" ng-controller="loginController">
+  <div class="modal-dialog">
+	
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">NPT - Sign Up</h4>
+      </div>
+      <div class="modal-body">
+		<p class="text-center">Already registered? <a href="#" id="signUpToSignIn" data-toggle="modal" data-target="#signInModal">Sign In</a>.</p>
+          <form  id="signup-form">
+          <div class="form-group">
+            <label for="userNameSignUp">Username:</label>
+            <input type="text" class="form-control" id="userNameSignUp" name="userNameSignUp" ng-model="userNameSignUp">
+          </div>
+          <div class="form-group">
+            <label for="passwordSignUp">Password:</label>
+            <input type="password" class="form-control" id="passwordSignUp" name="passwordSignUp" ng-model="passwordSignUp">
+          </div>
+           <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="emailSignUp" ng-model="email" name="email">
+          </div>    
+         <div class="alert alert-success alert-dismissable " ng-show="signUpStatus">
+			  <p class="pull-right" ng-click="signUpStatus=!signUpStatus">&times;</p>
+			  	You have been successfully registered with NPT . <strong><a href="#" id="signUpToSignInFromSuccessSignUp" data-toggle="modal" data-target="#signInModal">Sign in</a></strong> now .
+		 </div>
+		 <div class="alert alert-danger alert-dismissable " ng-show="signUpStatusFailure">
+			  <p class="pull-right" ng-click="signUpStatusFailure=!signUpStatusFailure">&times;</p>
+			  	Username {{userName}} already exists. Try with a different username.
+		 </div>
+              
+          <button type="submit" ng-click="registerUser()" class="btn btn-default btn-lg btn-block">Sign Up</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div> 
+ <!-- Modal Ends-->
+  
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    
+ 
+    <!-- Required JavaScript Libraries -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="styles/Bootstrap/js/bootstrap.min.js"></script>
+  <!-- <script src="lib/superfish/hoverIntent.js"></script> -->
+  <script src="js/superfish/superfish.min.js"></script>
+  <script src="js/morphext/morphext.min.js"></script>
+  <script src="js/wow/wow.min.js"></script>
+  <script src="js/stickyjs/sticky.js"></script>
+  <script src="js/login/login-controller.js"></script>
+  <script src="js/saveMap.js"></script>
+  <script src="js/reversepath.js"></script>
+  <!-- Template Specisifc Custom Javascript File -->
+  <script src="js/login/login.js"></script>
+  <!-- <script src="js/index.js"></script> -->
+   
+    
+</body>
+</html>

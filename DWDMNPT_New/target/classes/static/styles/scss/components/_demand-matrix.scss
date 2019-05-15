@@ -1,0 +1,184 @@
+.demand-item {
+  //   border: 1px solid grey;
+  box-shadow: 2px 2px 6px $secondary-color-dark;
+  font-weight: bold;
+  background-color: $secondary-color-light;
+  color: $text-color-gray-dark;
+  padding: 0;
+  margin-bottom: 5px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > span {
+      flex-grow: 1;
+    }
+  }
+
+  &__summary {
+    &--label {
+      font-size: 10px;
+      font-weight: 100;
+
+      &::after {
+        content: ":";
+      }
+    }
+  }
+
+  &__content {
+    & > ul {
+      list-style-type: none;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2px;
+      background-color: $color-white;
+      & li {
+        border-bottom: 1px solid $secondary-color-dark;
+        // flex-grow: 1;
+        flex-direction: column;
+        width: 100%;
+        padding: 5px 15px;
+        display: inline-block;
+        &:hover {
+          background-color: $color-warning;
+        }
+
+        .demand-field {
+          display: inline-block;
+          // min-width: 20%;
+          margin: 0 5px;
+          text-align: center;
+          &__label {
+            font-size: 10px;
+            font-weight: 100;
+            border: none;
+            &::after {
+              content: ":";
+            }
+          }
+
+          &__value {
+            color: $tertiary-color-light;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &--label {
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+      font-weight: 100;
+
+      &::after {
+        content: ":";
+      }
+    }
+    .demand-path-list__item {
+      &--label {
+        font-size: 10px;
+        font-weight: 100;
+
+        &::after {
+          content: ":";
+        }
+      }
+
+      &--wavelength {
+        position: relative;
+        & i {
+          transform: scale(2, 1);
+          margin: 0 3px;
+        }
+        & span {
+          position: absolute;
+          left: 4px;
+          font-size: 10px;
+          top: -4px;
+          color: $color-danger;
+        }
+      }
+    }
+
+    .demand-paths-list .demand-path-list__item--label:nth-child() {
+      color: green;
+    }
+    .demand-paths-list .demand-path-list__item--label:nth-child(2) {
+      color: blue;
+    }
+    .demand-paths-list .demand-path-list__item--label:nth-child(3) {
+      color: brown;
+    }
+    .demand-paths-list .demand-path-list__item--label:nth-child(4) {
+      color: greenyellow;
+    }
+
+    & > span {
+      flex-grow: 1;
+    }
+  }
+
+  //   &__footer {
+  //     display: flex;
+  //     flex-wrap: wrap;
+
+  //     & > span {
+  //       flex-grow: 1;
+  //     }
+  //   }
+
+  .demand-field {
+    display: inline-block;
+    // min-width: 20%;
+    margin: 0 5px;
+    text-align: center;
+    &__label {
+      font-size: 10px;
+      font-weight: 100;
+      border-top: 0.5px dashed grey;
+      padding: 1px 5px;
+    }
+
+    &__value {
+      color: $tertiary-color-light;
+      margin: 0;
+    }
+  }
+
+  &__footer,
+  &__summary,
+  &__content {
+    border-top: 1px solid $secondary-color-dark;
+  }
+
+  .demand-item__circuit-view {
+    display: none;
+  }
+
+  &__footer {
+    border-bottom: 2px solid $text-color-gray-dark;
+  }
+}
+
+// @for $i from 1 through length($path-colors) {
+//   $c: nth($path-colors, $i);
+
+//   // ... do something fancy with $c
+//   .demand-path-list__item:nth-of-type(#{$i + 1}) {
+//     //   border-bottom: 1px solid $secondary-color-dark;
+//     background-color: $c;
+//     padding: 0;
+//   }
+// }
+
+@each $current-color in $path-colors {
+  $i: index($path-colors, $current-color);
+  .demand-path-list__item:nth-of-type(#{$i}) {
+    background-color: $current-color;
+    color: white;
+  }
+}

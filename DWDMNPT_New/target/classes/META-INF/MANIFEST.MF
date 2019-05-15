@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: NPT
+Implementation-Version: 1.0
+Built-By: hiten
+Implementation-Vendor-Id: org.com.cdot
+Build-Jdk: 1.8.0_201
+Implementation-URL: http://projects.spring.io/spring-boot/NPT/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

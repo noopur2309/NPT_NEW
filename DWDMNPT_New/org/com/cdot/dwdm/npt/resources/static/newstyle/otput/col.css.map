@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACD,YAAY,EAAE,KAAK;EACnB,WAAW,EAAE,KAAK;;AAGtB,SACQ;EACJ,KAAK,EAAE,GAAG;EACd,MAAM,EAAC,GAAG;;AAIV,qIACA;EACI,KAAK,EAAC,IAAI;;AAGd,SAAU;EACN,KAAK,EAAE,GAAG;;AAGd,SAAU;EACN,KAAK,EAAE,GAAG",
+"sources": ["../input/col.scss"],
+"names": [],
+"file": "col.css"
+}

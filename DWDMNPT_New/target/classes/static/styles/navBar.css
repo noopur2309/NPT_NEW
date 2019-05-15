@@ -1,0 +1,241 @@
+.listElementNavBar{
+	width:16.66%;
+	/*  background: linear-gradient(135deg, #e5e5e5 0%, #c4c4c4 100%); */
+	text-align: center;   
+}
+
+.navBarList{
+	width:100%;
+	/* background: linear-gradient(to right, #5cb888, #007991) #d9d9d9; */
+	background:#e5e5e5;
+	    padding-right: 15px;
+}
+
+.navBarHeader{
+	
+}
+
+.descriptionNavBar{
+	height:25px;
+	/* background:grey;  */
+	/*background: url("../images/whirlpool.png");*/
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: rgb(245, 245, 245);
+    cursor: default;
+    background-color: #5cb888;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.descriptionNavBar h4{
+	margin: 0 auto;
+    font-weight: 400;
+    padding: 5px 0px;
+    font-size: inherit;
+    font-family: 'Patua One', cursive;
+    color: #5cb888;
+    display: inline-block;
+    /*  animation-name: headingAnimation;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear; */
+}
+
+
+#displayTime{
+	font-family: 'Patua One', cursive;
+    color: #777777;
+     font-weight: 400;
+     margin-right:10px;
+     transition:transform 1s,color 1s;
+}
+
+#displayTime:hover{
+transform: rotate(-10deg);
+}
+
+/* The animation code */
+@keyframes headingAnimation {
+    0%   {margin-left: 0%;font-weight: 100;}
+    10%   {margin-left: 10%;font-weight: 400;}
+    20%  {margin-left: 20%;font-weight: 700;}
+    30%  {margin-left: 30%;font-weight: 100;}
+    40% {margin-left: 40%;font-weight: 400;}
+    50%   {margin-left: 50%;font-weight: 700;}
+    60%  {margin-left: 40%;font-weight: 100;}
+    70%  {margin-left: 30%;font-weight: 400;}
+    80%  {margin-left: 20%;font-weight: 100;}
+    90%  {margin-left: 10%;font-weight: 100;}
+    100%  {margin-left: 0%;font-weight: 100;}
+}
+
+
+
+
+.navBarMenuListContainer {
+    margin-top: 25px;
+    background:darkgrey;
+	color:white;
+}
+
+.navBarHeaderContainer{
+	padding:12px;
+	    background: white;
+	  /*   width:7.333333%; */
+}
+
+.example5 .container-fluid{
+	background: #ecedee;
+}
+
+
+.navbar>.container-fluid .navbar-brand{
+	padding-left: 30px; 
+	margin-left: -15px;
+}
+
+/***************************
+****************************
+Dropdown Menu Styles
+****************************/     
+
+
+.navbar-default .navbar-nav>li>a {
+           color: #333;
+    font-weight: bolder;
+    /* font-size: larger;
+    font-weight: bolder; */
+} 
+
+
+/* Submenu */  
+.dropdown-menu > li > a {
+   color: #767676;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-weight: bolder;
+}
+
+ 
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+   top:0;left:101%;
+ /*   margin-top:-6px;margin-left:-1px;
+   -webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px; */
+ }
+  
+.dropdown-submenu > a:after {
+ /*  border-color: transparent transparent transparent #333;
+  border-style: solid;
+  border-width: 5px 0 5px 5px; */
+  content: " ";
+  display: block;
+  float: right;  
+  height: 0;     
+  margin-right: -10px;
+  margin-top: 5px;
+  width: 0;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f2f0;
+    width:100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* border-bottom: 5px solid rgb(92, 184, 92); */
+    color: #5cb888;
+    border:none;
+    padding:0px ;
+}
+ 
+.dropdown-submenu:hover>a:after {
+    border-left-color:#555;
+ }
+
+/* .dropdown-menu > li > a:hover, .dropdown-menu > .active > a:hover {
+  text-decoration: underline;
+}  
+ */
+.dropdown-menu > li > a:hover {
+  background-color: #ddd !important;
+  color: #5cb888;   
+  background-image: none;
+}
+  
+@media (max-width: 767px) {
+  .navbar-nav  {
+     display: inline;
+  }
+  .navbar-default .navbar-brand {
+    display: inline;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-default .navbar-nav .dropdown-menu > li > a {
+    color: red;
+    background-color: #ccc;
+    border-radius: 4px;
+    margin-top: 2px;   
+  }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+     color: #333;
+   }
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+     background-color: #ccc;
+   }
+
+   .navbar-nav .open .dropdown-menu {
+     border-bottom: 1px solid white; 
+     border-radius: 0;
+   }
+  .dropdown-menu {
+      padding-left: 10px;
+  }
+  .dropdown-menu .dropdown-menu {
+      padding-left: 20px;
+   }
+   .dropdown-menu .dropdown-menu .dropdown-menu {
+      padding-left: 30px;
+   }
+   li.dropdown.open {
+    border: 0px solid red;
+   }
+
+}
+ 
+@media (min-width: 768px) {
+  ul.nav li:hover > ul.dropdown-menu {
+    display: block;
+  }
+  #navbar {
+    text-align: center;
+  }
+}  
+
+
+
+
+
+@media screen and (max-width: 699px) and (min-width: 300px) {
+    .listElementNavBar{
+    width:100%;
+    }
+}
+
+
+@media screen and (min-width: 699px) {
+    .listElementNavBar{
+    width:16.66%;
+    }
+}

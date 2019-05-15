@@ -1,0 +1,231 @@
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NPT</title>
+<!-- Start -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and many more ..">
+    <meta name="Keywords" content="NPT, BOM">
+    <meta itemprop="name" content="NPT - Network Planning Tool">
+	<meta itemprop="description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and many more ..">
+	<meta itemprop="image" content="###">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="icon" type="image/png" href="images/CDOT_logo.gif" sizes="32x32">
+
+
+    <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+	<style type="text/css">
+		body { overflow:hidden; }
+		.geSidebarContainer .geTitle { color:#505050; }
+		.geSidebarContainer .geTitle input {
+			font-size:8pt;
+			color:#606060;
+		}
+		.geBlock {
+			z-index:-3;
+			margin:100px;
+			margin-top:40px;
+			margin-bottom:30px;
+			padding:20px;
+		}
+		.geBlock h1, .geBlock h2 {
+			margin-top:0px;
+			padding-top:0px;
+		}
+		.geEditor ::-webkit-scrollbar {
+		    width:12px;
+		    height:12px;
+		}
+		.geEditor ::-webkit-scrollbar-track {
+			background:whiteSmoke;
+			-webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.1);
+		}
+		.geEditor ::-webkit-scrollbar-thumb {
+			background:#c5c5c5;
+		    border-radius:10px;
+			border:whiteSmoke solid 3px;
+		}
+		.geEditor ::-webkit-scrollbar-thumb:hover {
+			background:#b5b5b5;
+		}
+		.geTemplate {
+			border:1px solid transparent;
+			display:inline-block;
+			_display:inline;
+			vertical-align:top;
+			border-radius:3px;
+			overflow:hidden;
+			font-size:14pt;
+			cursor:pointer;
+			margin:5px;
+		}
+		.geFooterContainer div.geSocialFooter a {
+			display:inline;
+			padding:0px;
+		}
+		.geFooterContainer div.geSocialFooter a img {
+			margin-top:10px;
+			opacity:0.8;
+		}
+		.geFooterContainer div.geSocialFooter a img:hover {
+			opacity:1;
+		}
+		#geFooterItem1 {
+			background-color: #cdcdcd;
+		}
+		#geFooterItem1:hover {
+			background-color: #b0b0b0;
+		}		
+		.geFooterContainer>div>img {
+			opacity:0.5;
+			background:#e5e5e5;
+			border:1px solid transparent;
+			cusor:pointer;
+			margin-top:3px;
+			margin-right:6px;
+			position:absolute;
+			right:4px;
+			top:12px;
+			padding:1px;
+			cursor:pointer;
+		}
+		.geFooterContainer>div>img:hover {
+			opacity: 1;
+		}
+	</style>
+
+
+<!-- End -->
+
+
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+
+<body class="geEditor">
+<div id="geInfo">
+	<div class="geBlock" style="text-align:center;min-width:50%;">
+		<h1>NPT</h1>
+		<p>
+			Pl
+		</p>
+		<h2 id="geStatus">Loading...</h2>
+		<p>
+			Please ensure JavaScript is enabled
+		</p>
+	</div>
+</div>
+<div id="geFooter" style="visibility:hidden;overflow:hidden;margin-right:170px;">
+	<div class="geSocialFooter" style="position:absolute;right:32px;white-space:nowrap;">
+    	<a href="https://plus.google.com/u/0/+DrawIo1/posts" title="draw.io on Google+" target="_blank">
+    		<img border="0" width="24" height="24" src="images/glyphicons_google.png" alt="draw.io on Google+"/>
+    	</a>
+    	&nbsp;
+    	<a href="https://www.facebook.com/pages/drawio/161015263923018" title="draw.io on Facebook" target="_blank">
+    		<img border="0" width="24" height="24" src="images/glyphicons_facebook.png" alt="draw.io on Facebook"/>
+    	</a>
+    	&nbsp;
+    	<a href="https://www.twitter.com/drawio" title="draw.io on Twitter" target="_blank">
+    		<img border="0" width="24" height="24" src="images/glyphicons_twitter.png" alt="draw.io on Twitter"/>
+    	</a>
+    	&nbsp;
+    	<a href="https://github.com/jgraph/draw.io" title="draw.io on GitHub" target="_blank">
+    		<img border="0" width="24" height="24" src="images/glyphicons_github.png" alt="draw.io on GitHub"/>
+    	</a>
+	</div>
+	<table align="center">
+		<tr>
+			<td id="geFooterItem2">
+				<a title="HTML5 JavaScript Diagramming" target="_blank" href="https://github.com/jgraph/draw.io">
+					<img border="0" align="absmiddle" style="margin-top:-4px;padding-right:10px;"
+						src="images/glyphicons_star.png"/>Source code now on Github
+				</a>
+			</td>
+			<td id="geFooterItem1">
+				<a title="#1 Rated Confluence Add-on" target="_blank"
+					href="https://marketplace.atlassian.com/plugins/com.mxgraph.confluence.plugins.diagramly/server/overview">
+					<img border="0" width="27" height="24" align="absmiddle" style="padding-right:16px;"
+						src="images/logo-confluence.png"/>#1 Rated Confluence Add-on
+				</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+/**
+ * Main
+ */
+App.main();
+
+/**
+ * Analytics
+ */
+if (urlParams['analytics'] != '0' && urlParams['dev'] != '1' && urlParams['chrome'] != '0')
+{
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+		ga('create', 'UA-78007-10', 'auto');
+		ga('send', 'pageview');
+}
+</script>
+</body>
+
+<!-- Older
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label>
+                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">What is your name?</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                </div>
+                <button id="send" class="btn btn-default" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Greetings</th>
+                </tr>
+                </thead>
+                <tbody id="greetings">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+
+-->
+</html>

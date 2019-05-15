@@ -1,0 +1,77 @@
+.overlay {
+    position: absolute;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay-bkg-color;
+    /* Black background with opacity */
+    z-index:2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #777;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    &::after {
+      content: "...";
+      position: absolute;
+      color: #777;
+    }
+  }
+  
+  .loader {
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%); */
+    border: 8px solid white;
+    border-radius: 50%;
+    border-top: 8px solid #5cb888;
+    width: 4rem;
+    height: 4rem;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  .loader-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  #modalLoadingContentOuter {
+    padding: 2rem;
+  }
+  
+  #modalLoadingContent{
+    p {
+      font-size: 1.5rem;
+    }
+
+    img {
+      margin: auto;
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+  

@@ -1,0 +1,714 @@
+#nodeConfigTab button.btn.btn-block,
+#linkConfigTab button.btn.btn-block {
+  width: 100%;
+}
+
+// #nodeConfigTab table {
+//   margin-bottom: 0;
+// }
+
+#linkNodeConfigModal select.input-sm {
+  height: 3.6rem;
+  line-height: 30px;
+}
+
+#linkNodeConfigModalTrigger,
+#linkPropertySave,
+#nodePropertySave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important;
+}
+
+// #linkInfoTable tbody > tr:nth-of-type(odd) {
+//   background-color: rgba(190, 195, 187, 0.18);
+// }
+
+/*configurationModal*/
+#configurationModal .genericModalBodyHeadPanel form {
+  display: flex;
+  justify-content: center;
+}
+
+.genericModalBodyHeadPanel {
+  /* border-bottom: 2px solid #33b573;
+	margin-bottom: 20px;  */
+  padding: 15px;
+  background-color: #fff;
+  color: #333;
+  /* background: rgba(192,194,194,1);
+background: -moz-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(192,194,194,1)), color-stop(59%, rgba(133,137,138,1)), color-stop(100%, rgba(177,179,179,1)));
+background: -webkit-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -o-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: -ms-linear-gradient(left, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+background: linear-gradient(to right, rgba(192,194,194,1) 0%, rgba(133,137,138,1) 59%, rgba(177,179,179,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0c2c2', endColorstr='#b1b3b3', GradientType=1 ); */
+}
+
+/* #modalBodyCablingHeadPanel{
+	border-bottom: 2px solid grey;
+} */
+
+.modal-body__header {
+  background: rgba(0, 0, 0, 0.075);
+  padding-bottom: 4rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+}
+
+.modal-content {
+  position: relative;
+  /* background-color: #eee; */
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.modal-header {
+  cursor: move;
+}
+
+.genericModalContent {
+  padding: 0px;
+}
+
+.genericModalBody {
+  padding: 0px 15px 0px 15px;
+}
+
+.genericModalFooter {
+  background-color: $color-white;
+}
+
+#modalBodyBomHeadPanel p {
+  color: #777;
+}
+
+#modalBodyBomHeadPanel p span {
+  font-weight: bolder;
+  color: #244824;
+}
+
+// .genericModalBodyHeadPanelHeading{
+// 	  // background: linear-gradient(to right top, #f5f5f5ad, #f5f5f5cc), url(../images/whirlpool.png);
+//     background-size: cover;
+//     /* background: #353b41ed; */
+//     padding-left: 14px;
+//     position: relative;
+//     padding-top: 10px;
+//     margin-bottom: 15px;
+//     /* box-shadow: 0px 3px 10px darkgreen; */
+//     width: 100%;
+//     text-align: center;
+//     margin: 0;
+//     z-index: 1050;
+//     box-shadow: 0px 5px 8px #ccc;
+// }
+
+// .genericModalBodyHeadPanelHeading p{
+// 	  color: $color-gray;
+//     font-weight: 900;
+//     font-size: 1.8rem;
+//     display: inline-block;
+//     border-bottom: .3rem solid $primary-color;
+//     letter-spacing: .3rem;
+//     text-transform: uppercase;
+// }
+
+.genericModalTabMenuPanel {
+  border-bottom: 1px solid $secondary-color-light;
+  border-top: 1px solid $secondary-color-light;
+  text-align: center;
+  /* margin-bottom: 16px; */
+  padding: 1.5rem 0;
+  // background: #abbaab;
+  // background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  // background: linear-gradient(to right, rgba(173, 183, 169, 0.2), rgba(171, 186, 171, 0.24));
+  /* box-shadow: 0px -3px 7px #c4c4c4; */
+}
+
+.genericModalBodyHeadPanel {
+  /* border-bottom: 2px solid #33b573;
+  margin-bottom: 20px; */
+  padding: 1.5rem;
+  background-color: $color-white;
+  color: $color-gray;
+}
+
+/* #modalBodyCablingHeadPanel{
+    border-bottom: 2px solid grey;
+} */
+
+.modal-body__header {
+  background: rgba(0, 0, 0, 0.075);
+  padding-bottom: 4rem;
+  clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+}
+
+.modal-content {
+  position: relative;
+  /* background-color: #eee; */
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+.modal-header {
+  cursor: move;
+}
+
+.genericModalContent {
+  padding: 0px;
+}
+
+.genericModalBody {
+  padding: 0px 15px 0px 15px;
+}
+
+#modalBodyBomHeadPanel p {
+  color: #777;
+  span {
+    font-weight: bolder;
+    color: #244824;
+  }
+}
+
+.genericModalBodyHeadPanelHeading {
+  // background: linear-gradient(to right top, #f5f5f5ad, #f5f5f5cc), url(../images/whirlpool.png);
+  background-size: cover;
+  background: $color-white;
+  padding-left: 14px;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  /* box-shadow: 0px 3px 10px darkgreen; */
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  z-index: 1050;
+  box-shadow: 0px 3px 5px $secondary-color;
+
+  p {
+    color: $color-gray;
+    font-weight: 900;
+    font-size: 1.8rem;
+    display: inline-block;
+    // border-bottom: .3rem solid $primary-color;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-family: rokkit;
+    border-bottom: 2px solid #5cb888;
+  }
+}
+
+.genericModalDialog {
+  width: 65%;
+}
+
+#modalBodyBomContentPanelEquipment,
+#modalBodyBomContentPanelEquipmentPref {
+  display: none;
+}
+
+#modalBodyBomTabMenu {
+  /* border-bottom:  2px solid #777; */
+  text-align: center;
+  /* margin-bottom: 16px; */
+  padding: 8px 0;
+  background: #abbaab;
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  background: linear-gradient(
+    to right,
+    rgba(173, 183, 169, 0.2),
+    rgba(171, 186, 171, 0.24)
+  );
+  /* box-shadow: 0px -3px 7px #c4c4c4; */
+  .btn {
+    -webkit-transition: color 300ms;
+    transition: color 300ms, border-color 0.3s;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bolder;
+    width: 25%;
+    margin: 5px;
+    /* border: 0.2px solid #283048; */
+    border-radius: 0;
+    padding: 10px 0px;
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #77bda0;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transform-origin: 50%;
+      transform-origin: 50%;
+      -webkit-transition-property: transform;
+      transition-property: transform;
+      -webkit-transition: 300ms ease-out;
+      transition: 300ms ease-out;
+    }
+    &:hover {
+      &:before {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      background: none;
+      color: white;
+      border-color: #77bda0;
+      /*  box-shadow:2px 2px 5px #777; */
+      transition: border-color 0.3s, color 0.3s;
+      -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+      transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    }
+  }
+}
+
+#modalBodyBomTabMenu .btn:focus {
+  color: white;
+}
+
+.genericModalBodyContentPanel {
+  max-height: 49rem;
+  min-height: 20rem;
+  overflow: auto;
+  padding: 1.5rem;
+  border-top: 1px solid $secondary-color;
+  background: $color-white;
+
+  table {
+    border: 1px solid $secondary-color;
+    // font-weight: 500;
+
+    // thead {
+    //     background: $color-gray;
+    //     text-align: center;
+    //     font-weight: bolder;
+
+    //     th{
+    //       border:none;
+    //     }
+    // }
+  }
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.modal-header {
+  padding: 0px;
+  border: none;
+}
+
+.min {
+  .fa {
+    font-size: 1.4rem;
+  }
+  .menuTab {
+    display: none;
+  }
+  .modal-dialog,
+  .modal-content {
+    height: 100%;
+    width: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  .modal-header {
+    height: 100%;
+    width: 100%;
+    margin: 0px !important;
+    /* padding: 3px 5px !important;  */
+    p {
+      font-size: 0.8rem;
+      padding-top: 5px;
+    }
+  }
+
+  .genericModalBodyHeadPanelHeading {
+    // background: #007991;
+    // background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+    // background: linear-gradient(to right, #5cb888, #007991);
+    /* padding-left: 14px; */
+    position: relative;
+    padding-top: 4px;
+    /* margin-bottom: 15px; */
+    /* box-shadow: 0px 3px 10px darkgreen; */
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    z-index: 1050;
+    /* box-shadow: 0px 5px 8px #777; */
+  }
+}
+
+#modalBodyviewReportContentPanelwavelengthConfi,
+#modalBodyviewReportContentPanelviewNodeReport,
+#modalBodyviewReportContentPanelviewLinkReport,
+#modalBodyviewReportContentPanelCablingDiagram,
+#modalBodyviewReportContentPanelwavelengthConfi,
+#modalBodyviewReportContentPanelMPNConfi,
+#modalBodyviewReportContentPanelInventory,
+#modalBodyviewReportContentPanelOpticalPower {
+  display: none;
+}
+
+#modalBodyviewReportContentPanelOpticalPower .btn {
+  -webkit-transition: color 300ms;
+  transition: color 300ms, border-color 0.3s;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bolder;
+  width: 20%;
+  margin: 5px;
+  /* border: 0.2px solid #283048; */
+  border-radius: 0;
+  padding: 10px 0px;
+}
+
+#modalBodyviewReportTabMenu .btn:before,
+#modalBodyviewReportContentPanelOpticalPower .btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #77bda0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+#modalBodyviewReportTabMenu .btn:hover:before,
+#modalBodyviewReportContentPanelOpticalPower .btn:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#modalBodyviewReportTabMenu .btn:hover,
+#modalBodyviewReportContentPanelOpticalPower .btn:hover {
+  background: none;
+  color: white;
+  border-color: #77bda0;
+  /*  box-shadow:2px 2px 5px #777; */
+  transition: border-color 0.3s, color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#modalBodyviewReportTabMenu .btn:focus,
+#modalBodyviewReportContentPanelOpticalPower .btn:focus {
+  color: white;
+}
+
+// .modalBodyviewReportContentPanelwavelengthConfiTable {
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+//   th {
+//     text-align: center;
+//   }
+// }
+
+// .modalBodyviewReportContentPanelviewNodeReportTable {
+//   > tbody > tr > td {
+//     border: 1px solid #ecedee;
+//   }
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+// }
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+// .modalBodyviewReportContentPanelwavelengthConfiTable th {
+//   text-align: center;
+// }
+
+// .modalBodyviewReportContentPanelviewLinkReportTable {
+//   > tbody > tr > td {
+//     border: 1px solid #ecedee;
+//   }
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+// }
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+// .modalBodyviewReportContentPanelCablingDiagramTable {
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+//   th {
+//     text-align: center;
+//   }
+// }
+
+#viewReportModal {
+  .genericModalBodyHeadPanel {
+    display: flex;
+    padding: 0px;
+  }
+}
+
+.viewReportInputFormDiv {
+  flex: 0.25;
+  // background: #e4f0dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid $secondary-color;
+
+  .viewReportInputForm {
+    //   color: $color-white;
+    //   background: rgba(73, 155, 234, 1);
+    //   background: -moz-linear-gradient(
+    //     left,
+    //     rgba(73, 155, 234, 1) 0%,
+    //     rgba(32, 124, 229, 1) 100%
+    //   );
+    //   background: -webkit-gradient(
+    //     left top,
+    //     right top,
+    //     color-stop(0%, rgba(73, 155, 234, 1)),
+    //     color-stop(100%, rgba(32, 124, 229, 1))
+    //   );
+    //   background: -webkit-linear-gradient(
+    //     left,
+    //     rgba(73, 155, 234, 1) 0%,
+    //     rgba(32, 124, 229, 1) 100%
+    //   );
+    //   background: -o-linear-gradient(
+    //     left,
+    //     rgba(73, 155, 234, 1) 0%,
+    //     rgba(32, 124, 229, 1) 100%
+    //   );
+    //   background: -ms-linear-gradient(
+    //     left,
+    //     rgba(73, 155, 234, 1) 0%,
+    //     rgba(32, 124, 229, 1) 100%
+    //   );
+    //   background: linear-gradient(
+    //     to right,
+    //     rgba(73, 155, 234, 1) 0%,
+    //     rgba(32, 124, 229, 1) 100%
+    //   );
+  }
+}
+
+.viewReportInputForm select {
+  border: none;
+  // -moz-appearance: none;
+  position: relative;
+
+  &:after {
+    content: "v";
+    position: absolute;
+    top: 0;
+    right: 5px;
+  }
+}
+
+#modalBodyviewReportContentPanelwavelengthConfi,
+#modalBodyviewReportContentPanelviewNodeReport,
+#modalBodyviewReportContentPanelviewLinkReport,
+#modalBodyviewReportContentPanelCablingDiagram,
+#modalBodyviewReportContentPanelwavelengthConfi,
+#modalBodyviewReportContentPanelMPNConfi,
+#modalBodyviewReportContentPanelInventory,
+#modalBodyviewReportContentPanelOpticalPower {
+  display: none;
+}
+
+#modalBodyviewReportTabMenu {
+  // border-bottom: 1px solid $secondary-color;
+  border-top: 1px solid $secondary-color;
+  text-align: center;
+  /* margin-bottom: 16px; */
+  padding: 1.5rem 0;
+  // background: #abbaab;
+  // background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  // background: linear-gradient(to right, rgba(173, 183, 169, 0.2), rgba(171, 186, 171, 0.24));
+  /* box-shadow: 0px -3px 7px #c4c4c4; */
+  .btn {
+    -webkit-transition: color 300ms;
+    transition: color 300ms, border-color 0.3s;
+    position: relative;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: bolder;
+    width: 20%;
+    margin: 5px;
+    /* border: 0.2px solid #283048; */
+    border-radius: 0;
+    padding: 10px 0px;
+  }
+}
+
+#modalBodyviewReportContentPanelOpticalPower .btn {
+  -webkit-transition: color 300ms;
+  transition: color 300ms, border-color 0.3s;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bolder;
+  width: 20%;
+  margin: 5px;
+  /* border: 0.2px solid #283048; */
+  border-radius: 0;
+  padding: 10px 0px;
+}
+
+#modalBodyviewReportTabMenu .btn:before,
+#modalBodyviewReportContentPanelOpticalPower .btn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #77bda0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+#modalBodyviewReportTabMenu .btn:hover:before,
+#modalBodyviewReportContentPanelOpticalPower .btn:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#modalBodyviewReportTabMenu .btn:hover,
+#modalBodyviewReportContentPanelOpticalPower .btn:hover {
+  background: none;
+  color: white;
+  border-color: #77bda0;
+  /*  box-shadow:2px 2px 5px #777; */
+  transition: border-color 0.3s, color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#modalBodyviewReportTabMenu .btn:focus,
+#modalBodyviewReportContentPanelOpticalPower .btn:focus {
+  color: white;
+}
+
+// .modalBodyviewReportContentPanelwavelengthConfiTable {
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+//   th {
+//     text-align: center;
+//   }
+// }
+
+// .modalBodyviewReportContentPanelviewNodeReportTable {
+//   > tbody > tr > td {
+//     border: 1px solid #ecedee;
+//   }
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+// }
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+// .modalBodyviewReportContentPanelwavelengthConfiTable th {
+//   text-align: center;
+// }
+
+// .modalBodyviewReportContentPanelviewLinkReportTable {
+//   > tbody > tr > td {
+//     border: 1px solid #ecedee;
+//   }
+//   tbody label {
+//     margin: 10px;
+//   }
+//   text-align: center;
+//   font-weight: bolder;
+// }
+
+/* .npt-form-inline{
+	background:grey;
+} */
+
+#modalBodyviewReportContentPanelOpticalPower .btn {
+  width: 40%;
+}
+
+.node-info-div-view-report {
+  /*  border: 2px solid #e4f0dd; */
+  /* padding: 5px 53px; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  text-align: center;
+  flex-wrap: wrap;
+  flex: 1;
+}

@@ -1,0 +1,164 @@
+// .table td {
+//     border: none;
+//   }
+
+//   .table-fixed {
+//     thead {
+//       width: 97%;
+//     }
+//     tbody {
+//       height: 23rem;
+//       overflow-y: auto;
+//       width: 100%;
+//     }
+//     thead, tbody, tr, td, th {
+//       display: block;
+//     }
+//     tbody td, thead > tr > th {
+//       float: left;
+//       border-bottom-width: 0;
+//     }
+//   }
+
+// #demands-view table {
+//   td, th {
+//     text-align: center;
+//   }
+// }_
+
+.table {
+  text-align: center;
+  font-weight: 400;
+
+  thead {
+    background: $color-gray;
+    text-align: center;
+    // font-weight: bolder;
+    color: $color-white;
+
+    th {
+      border: none;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      vertical-align: middle;
+    }
+  }
+
+  tbody {
+    border-bottom: 1px solid $secondary-color;
+  }
+}
+
+.table-bordered {
+  thead {
+    th {
+      border: none !important;
+    }
+  }
+}
+
+// .footable {
+//   margin-bottom: 0;
+//   min-height: 29.3rem;
+// }
+
+// table thead {
+//   background: #777;
+//   color: #ffffff;
+// }
+
+// .table > {
+//   thead > tr > th {
+//     vertical-align: middle;
+//     text-align: center;
+//     border-bottom: none;
+//   }
+//   tbody > tr > td {
+//     vertical-align: middle;
+//     text-align: center;
+//   }
+// }
+
+// #preferenceModal table tr {
+//   border-bottom: 1px solid #d3d7cf;
+// }
+
+// #DemandMatrixTable {
+//   border-left: none;
+//   border-right: none;
+//   padding-top: 5rem;
+//   border-collapse: collapse;
+//   margin-bottom: 0;
+//   thead {
+//     /* position:fixed; */
+//   }
+//   tbody td {
+//     width: 10rem;
+//     word-wrap: break-word;
+//   }
+//   td {
+//     &:last {
+//       border-right: none;
+//     }
+//     &:first {
+//       border-left: none;
+//     }
+//   }
+// }
+
+#links-view > table > tbody div.editable-input {
+  width: 25% !important;
+  > input {
+    width: 100% !important;
+  }
+}
+
+//   .table-striped > tbody > tr:nth-of-type(odd) {
+//     background-color: $secondary-color-light;
+//   }
+
+//   .modalBodyBomContentPanelEquipmentPrefTable {
+//     tbody label {
+//       margin: 10px;
+//     }
+//     text-align: center;
+//     font-weight: bolder;
+//     th {
+//       text-align: center;
+//     }
+//   }
+
+//   .table-bordered > {
+//     tbody > tr > {
+//       td, th {
+//         border: none;
+//       }
+//     }
+//     tfoot > tr > {
+//       td, th {
+//         border: none;
+//       }
+//     }
+//     thead > tr > {
+//       td, th {
+//         border: none;
+//       }
+//     }
+//   }
+
+//   .modalGenericTable {
+//     th {
+//       text-align: center;
+//     }
+//     font-weight: bolder;
+//     text-align: center;
+//   }
+
+//   .modalBodyCablingContentPanelBomTable > tbody > tr > td {
+//     border: 1px solid #ecedee;
+//   }
+
+//   .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+//     border: none;
+// }

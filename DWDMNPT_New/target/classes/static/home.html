@@ -1,0 +1,1935 @@
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" >
+<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <!-- title of the document -->
+      <title>NPT</title>
+      <!-- ***************************Meta tags start************************************** -->
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="Description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and many more ..">
+      <meta name="Keywords" content="NPT, BOM">
+      <meta itemprop="name" content="NPT - Network Planning Tool">
+      <meta itemprop="description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and much more ..">
+      <meta itemprop="image" content="###">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <!-- ***************************Meta tags end************************************** -->
+      <!-- *********************Links to external files/sources **********************************-->
+      <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">   
+      <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+      <link rel="stylesheet" type="text/css" href="styles/Bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/Bootstrap/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/Bootstrap/fonts/glyphicons-halflings-regular.ttf">
+      <link rel="stylesheet" type="text/css" href="styles/contextmenu/contextMenu.css">
+      
+      <link href="styles/Bootstrap-Editable/bootstrap-editable.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.css">
+      <!-- <link rel="stylesheet" type="text/css" href="styles/accordion.css"> -->
+      <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Gudea|Croissant+One|Ultra|Patua+One|Passion+One|Anton |Abel|Kreon|Rokkitt|Glegoo" rel="stylesheet">
+      <!-- <link id="themecss" rel="stylesheet" type="text/css" href="//www.shieldui.com/shared/components/latest/css/light/all.min.css" /> -->
+      <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+      <link rel="stylesheet" href="styles/jQuery/jquery-ui.css">
+            
+  	  <link rel="stylesheet" type="text/css" href="styles/rappid/rappid.css">
+  	  
+  	  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+    	integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   	    crossorigin=""/>
+   	  <link rel="stylesheet" href="js/mapjs/leaflet-search.min.css" />
+	  <link rel="stylesheet" href="js/mapjs/Control.FullScreen.css" />
+	  <link rel="stylesheet" type="text/css" href="styles/home.css">
+      <!-- <link rel="stylesheet" type="text/css" href="styles/main.css">   
+      <link rel="stylesheet" type="text/css" href="styles/viewReport.css">  
+        <link rel="stylesheet" type="text/css" href="styles/bom.css">        
+      <link rel="stylesheet" type="text/css" href="styles/navBar.css">     -->
+      
+    
+      
+      <!-- Icon -->
+      <link rel="icon" type="image/png" href="images/CDOT_logo.gif" sizes="32x32">
+      
+      <!-- ***************************Links End************************************** -->
+      <!-- Include pages source -->
+       <!-- <script src="js/jquery-3.1.1.js"></script> -->
+       <script src="js/angular.min.js"></script>
+      <script src="/js/w3data.js"></script>
+      
+      
+      <!--  ********************************* Sources to download @runtime  *********************************
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+         
+         <script src="http://www.w3schools.com/lib/w3data.js"></script> 
+         
+         
+         
+		 ********************************* ********************************* *********************************   -->
+		
+
+   </head>
+   <!--  Header  -->
+   <body ng-app="npt-app" ng-controller="mainController">
+	<div class="overlay-container body-overlay">
+		<div class="overlay">
+			<div class="loader-container">
+				<div class="loader"></div>
+			</div>
+			<p class="overlay-text"></p>
+		</div>
+	</div>
+
+	<!-- Main Container Starts -->
+      <div class="container-fluid">
+      <!-- Title Bar starts -->
+      <div class="app-navigation">
+            <nav class="navbar navbar-default ">
+               <div class="container-fluid">
+               <div class="row">
+                 <div class="col-md-1 col-sm-3 zeroPadding app-navigation__logo-container">
+                     <div class="navbar-header navBarHeader">
+                     <button type="button" class="navbar-toggle collapsed pull-right"
+                        data-toggle="collapse" data-target="#npt-navbar">
+                     <span class="sr-only">Toggle navigation</span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span> <span
+                        class="icon-bar"></span>
+                     </button>
+                     <a class="navbar-brand app-navigation__logo-container__brand" href="#">
+                        <img class="img-responsive" src="images/NptLogo.png" alt="Network Programming Tool">
+                     </a>
+                  </div>
+                 </div>
+                 
+                 <div class="col-md-11 col-sm-9 zeroPadding">
+                   <!-- <div class="col-md-12 descriptionNavBar">
+                     <h4>Network Planning Tool - <span>An OCN Group Initiative</span>
+                        </h4>
+                     <span id="displayTime" class="pull-right"></span>
+                   </div> -->
+                   <div id="npt-navbar" class="navbar-collapse collapse zeroPadding app-navigation__list-container">
+                     <ul class="nav navbar-nav  app-navigation-list">
+                        <!-- <li class="listElementNavBar"><a href="#">Home <i class="fa fa-home fa-1x" aria-hidden="true"></i></a></li> -->
+                        <li class="dropdown app-navigation-list__item">
+                           <a href="#"
+                              class="dropbtn">Map <i class="fa fa-map" aria-hidden="true"></i></a>
+                           <ul class="dropdown-menu">
+							<!-- <li><a href="#" data-toggle="modal" data-target="#createMapModal">Create
+                              Map</a></li> 
+                               <li><a href="#">
+                                 <form>
+                                   <label for="loadMap">Load Map</label>
+                                   <input type="file" id="loadMap"></input>
+                                 </form>
+                              </a></li> -->
+										<li><a href="#" id="saveMapId">Save Map</a></li>
+										<!-- <li><a href="#"
+                                 id="generateMapControlPathFiles">Generate Control Path
+                              Files</a></li> -->
+									</ul>
+                        </li>
+                        <!-- <li class="dropdown app-navigation-list__item">
+                           <a href="#"
+                              class="dropbtn">Analysis <i class="fa fa-area-chart"
+                              aria-hidden="true"></i></a>
+                           <div class="dropdown-content">
+                              <a href="#">Fault Analysis</a> <a href="#">Bottleneck
+                              Analysis</a>
+                           </div>
+                        </li> -->
+                        <li class="dropdown app-navigation-list__item">
+                           <a href="#"
+                               class="dropdown-toggle" data-toggle="dropdown">Management <i class="fa fa-suitcase"
+                              aria-hidden="true"></i>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="#"   id="equipmentTrigger">Generate Equipment</a></li> 
+                               <li><a href="#"   id="generatePatchCord">Patch Cord Allocation</a></li> 
+                               <li class="dropdown dropdown-submenu"><a  href="#" class="dropdown-toggle" data-toggle="dropdown">Config File</a>
+                                  <ul class="dropdown-menu">
+												<li><a id="configFileGenerationTrigger" href="#">Controlpath
+														File Generation</a></li>
+												<li><a id="datapathConfigFileGenerationTrigger"
+													href="#">Datpath File Generation</a></li>
+												<li><a id="combinedConfigFileGenerationTrigger"
+													href="#">All File Generation</a></li> 
+													 
+								  </ul>
+							   </li>
+                              <!--  <li><a id="configFileGenerationTrigger" href="#">Controlpath File Generation</a></li>
+                               <li><a id="datapathConfigFileGenerationTrigger" href="#">Datpath File Generation</a></li>   -->
+                               <li><a href="#" id="generateMapIpSchemeId">Generate IP Scheme</a></li>
+                                <!--<li><a href="#">Inventory Listing</a></li> -->
+                               <li><a id="generateConsolidatedReportTrigger" href="#" class="dropdown-toggle" data-toggle="dropdown">Generate Consolidated Report</a></li>                              
+                               <li><a id="uploadConfigFileFromEMSTrigger" href="#" class="dropdown-toggle" data-toggle="dropdown">Upload Config File To EMS</a></li>
+                               <li><a id="xml_reversepath" href="#" data-toggle="modal" data-target="#myModal">Download Config File from EMS</a></li>
+                                <!-- <li><a id="generateChassisImagesTrigger" href="#" class="dropdown-toggle" data-toggle="dropdown">Generate Chassis Images</a></li> -->							   
+                           </ul>
+                         </li>
+                  
+                        <li class="dropdown app-navigation-list__item">
+                           <a href="#"
+                              class="dropbtn">View <i class="fa fa-eye"
+                              aria-hidden="true"></i></a>
+                           <ul class="dropdown-menu">
+                            	<!-- <li><a id="bomModalTrigger" href="#">Equipment</a></li> -->
+                            	<li><a id="equipmentModalTrigger" href="#">Equipment</a></li>
+	                            <li><a href="#" id="viewReportId">System Configuration</a></li>
+	                            <!-- <li><a href="#" id="viewControlPathConfigFileId">Control Path Setup</a></li> -->
+    	                        <li><a href="#" id="viewCablingDiagram">Connectivity Table</a></li>
+        	                    <!-- <li><a href="#" id="viewOpticalPowerPerDemand">Optical Power Per Demand</a></li> -->
+        	                     <!-- <li><a href="#" id="onlineConsolidatedReportView"> Consolidated Report </a></li> -->
+        	                     <!-- <li><a href="#" id="equipmentOnlineView"> Equipment</a></li> -->
+        	                     <li><a href="#" id="configFileView"> Configuration Files </a></li> 
+        	                     <li><a href="graph_design.html" target="_blank"  id="GraphView"> Online Statistics </a></li>
+        	                            	                        
+                           </ul>
+                        </li>
+                        
+                       <li class="dropdown app-navigation-list__item">
+                           <a href="#"
+                               class="dropdown-toggle" data-toggle="dropdown">Configurations <i class="fa fa-wrench" aria-hidden="true"></i>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="#" id="configurationModalTrgr">Card Configuration</a></li>
+                               <li ><a  href="#" id="preferencesModalTrgr">Preferences</a></li>
+                               <li ><a  href="#" id="updateEquipmentTrgr">Update NPT Equipment</a></li>						   
+                           </ul>
+                      </li>                        
+               
+                      <li class="dropdown app-navigation-list__item">
+                           <a href="#">Brown Field <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                           <ul class="dropdown-menu">
+                              <li><a id="flowStatusCheck" href="#">Status</a></li>
+                              <li><a id="restoreGreenField" href="#">Restore Green Field</a></li>
+                              <li><a id="brownFieldConvertTrgr" href="#">Convert to Brown Field</a></li>
+                           </ul>
+                      </li>
+                        <li class="dropdown app-navigation-list__item">
+                           <a href="#">Help <i class="fa fa-question-circle" aria-hidden="true"></i></a>
+                           <ul class="dropdown-menu">
+                              <li><a id="testingMenuForDeveloperTrigger" href="#">Testing{For
+                              Developer}</a></li>
+                              <li><a id="updateSchemaTrigger" href="#">Update Schema</a></li>
+                              
+                           </ul>
+						</li>      
+															
+						<li class="dropdown app-navigation-list__item pull-right">
+							<a href="#"><span id="home-username"></span> <i class="fa fa-user" aria-hidden="true"></i></a>
+							<ul class="dropdown-menu">
+							   <li><a id="testingMenuForDeveloperTrigger" class="dashboard-redirect" href="#">Dashboard</a></li>
+							   <li><a id="logoutTrigger" href="#">Logout</a></li>
+							</ul>
+						 </li>  
+                     </ul>
+                  </div>
+                  
+                 </div>
+                  
+                 </div>
+                  <!--/.nav-collapse -->
+               </div>
+            </nav>
+            <!--/ nav-ends -->
+         </div>
+      <!-- Title Bar ends -->
+      
+      <!-- Tools Bar starts  -->
+      <!-- <div class="row">
+         <div class="col-md-12 col-sm-12">
+            Toolbar for direct option
+            <div style="left: 0px; right: 0px;" class="geToolbarContainer">
+               <div class="geToolbar">
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 28px;" title="View (Space+Drag to pan)" class="geLabel" href="javascript:void(0);">
+                     <div class="geSprite geSprite-formatpanel" style="margin-left:-4px;margin-top:-3px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; position: relative; overflow: hidden; width: 50px;" title="Zoom (Alt+Mousewheel)" id="resetZoom" class="geLabel" href="javascript:void(0);">100%<img style="position: absolute; right: 1px; top: 5px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0"></a>
+                  <div class="geSeparator"></div>
+                  <a title="Zoom In (Ctrl + / Alt+Mousewheel)" class="geButton" id="zoomIn" href="javascript:void(0);">
+                     <div class="geSprite geSprite-zoomin"></div>
+                  </a>
+                  <a title="Zoom Out (Ctrl - / Alt+Mousewheel)" class="geButton" id="zoomOut" href="javascript:void(0);">
+                     <div class="geSprite geSprite-zoomout"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Undo (Ctrl+Z)" class="geButton mxDisabled" id="undo-button" href="javascript:void(0);">
+                     <div class="geSprite geSprite-undo"></div>
+                  </a>
+                  <a title="Redo (Ctrl+Shift+Z)" class="geButton mxDisabled" id="redo-button" href="javascript:void(0);">
+                     <div class="geSprite geSprite-redo"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Delete (Delete)" class="geButton mxDisabled" id="print" href="javascript:void(0);">
+                     <div class="geSprite geSprite-delete"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="To Front (Ctrl+Shift+F)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-tofront"></div>
+                  </a>
+                  <a title="To Back (Ctrl+Shift+B)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-toback"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Fill Color..." class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-fillcolor"></div>
+                  </a>
+                  <a title="Line Color..." class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-strokecolor"></div>
+                  </a>
+                  <a title="Shadow" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-shadow"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 34px;" title="Connection" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-connection" style="margin-left:0px;margin-top:0px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 34px;" title="Waypoints" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-orthogonal" style="margin-left:0px;margin-top:0px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 28px;" title="Insert (Doubleclick to insert text)" class="geLabel" href="javascript:void(0);">
+                     <div class="geSprite geSprite-plus" style="margin-left:-4px;margin-top:-3px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+               </div>
+               <a class="geButton" style="position: absolute; display: inline-block; top: 5px; right: 26px; padding: 2px; font-size: 14px; width: 16px; height: 16px; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODdCREY5REY1NkQ3MTFFNTkyNjNEMTA5NjgwODUyRTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODdCREY5RTA1NkQ3MTFFNTkyNjNEMTA5NjgwODUyRTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4N0JERjlERDU2RDcxMUU1OTI2M0QxMDk2ODA4NTJFOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4N0JERjlERTU2RDcxMUU1OTI2M0QxMDk2ODA4NTJFOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlnMQ/8AAAAJUExURQAAAP///3FxcTfTiAsAAAACdFJOU/8A5bcwSgAAACFJREFUeNpiYEQDDEQJMMABTAAixcQ00ALoDiPRcwABBgB6DADly9Yx8wAAAABJRU5ErkJggg==&quot;);" title="Format Panel (Ctrl+Shift+P)" href="javascript:void(0);"></a>
+               <a class="geButton" style="position: absolute; display: inline-block; top: 5px; right: 42px; padding: 2px; font-size: 14px; width: 16px; height: 16px; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAABlBMVEUAAABEREQ3UJNbAAAAAXRSTlMAQObYZgAAABxJREFUCNdj+PkBhA4YgNB5AwZ+BiACMiAiEFkA9QQNgW8IGoYAAAAASUVORK5CYII=&quot;);" title="Fullscreen" href="javascript:void(0);"></a>
+               <a style="position: absolute; display: inline-block; width: 16px; height: 16px; color: rgb(102, 102, 102); top: 5px; right: 10px; padding: 2px; font-size: 14px; text-decoration: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDg2NEE3NUY1MUVBMTFFM0I3MUVEMTc0N0YyOUI4QzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDg2NEE3NjA1MUVBMTFFM0I3MUVEMTc0N0YyOUI4QzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0ODY0QTc1RDUxRUExMUUzQjcxRUQxNzQ3RjI5QjhDMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0ODY0QTc1RTUxRUExMUUzQjcxRUQxNzQ3RjI5QjhDMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pg+qUokAAAAMUExURQAAANnZ2b+/v////5bgre4AAAAEdFJOU////wBAKqn0AAAAL0lEQVR42mJgRgMMRAswMKAKMDDARBjg8lARBoR6KImkH0wTbygT6YaS4DmAAAMAYPkClOEDDD0AAAAASUVORK5CYII=&quot;); background-position: 50% 50%; background-repeat: no-repeat;" class="geButton" title="Collapse/Expand" href="javascript:void(0);"></a>
+            </div>
+            Toolbar for direct option end
+         </div>
+         Tool bar col ends
+      </div> -->
+      <!-- toolbar ends -->
+      
+      <!-- Content Area starts -->
+      <div class="container-fluid zeroPadding">
+			<div class="row contentArea">
+				<!-- Navigation Start -->
+				<div class="col-md-1 col-sm-12 col-lg-1 network-elements-container" id="networkElementId">
+					<div class="panel panel-default network-elements-panel" id="networkElementPanel">
+						<div class="panel-heading text-center network-elements-panel__heading">
+							Network Elements
+						</div>
+						<div id="netelemId" class="network-elements-panel__content">
+							<p class="text-center">(Drag & Drop)</p>
+						</div>
+
+				<!-- <div class="row">
+						<div class="col-md-12 col-sm-12">
+							<p id="tempInfo"></p>             
+						</div>
+					</div> 
+					<button id="resetZoom" class="btn" title="Reset Zoom">
+						<i class="fa fa-refresh" aria-hidden="true"></i>
+					</button>
+						<button id="zoomInBtn" class="btn" title="Zoom In">
+						<i class="fa fa-search-plus" aria-hidden="true"></i>
+					</button>
+					<button id="zoomOutBtn" class="btn" title="Zoom Out">
+						<i class="fa fa-search-minus" aria-hidden="true"></i>
+					</button> -->
+				 </div>
+				</div>
+				<!-- Navigation -->
+				<!-- Canvas Start -->
+				<div class="col-md-8 col-sm-12 col-lg-8 zeroPadding" id="canvasIdContainer">
+					<div class="row toolbar-menu" id="menuDivInsideCanvas">
+						<div class="col-md-12">
+							<ul class="nav nav-pills pull-left">
+								<li class="active" id="canvasViewLiId"><a data-toggle="pill"
+									href="#canvasId">Canvas</a></li>
+								<li id="chassisViewLiId"><a data-toggle="pill"
+									href="#chassisViewCanvasDiv">Chassis View</a></li>
+								 <li id="opticalPowerCanvasLiId"><a data-toggle="pill"
+									href="#opticalPowerCanvasMainContainer">Optical Power</a></li>
+									
+								<!--  <li><a data-toggle="tab" href="#menu2">Chassis View</a></li> -->
+							</ul>
+						</div>
+						<ul class="shortcut-button-ul">
+						<!-- <li><button id="fastMode" class="btn toolBarBtn" title="Fast Mode:All in one call ">
+							<i class="fa fa-rocket" aria-hidden="true"></i>
+						</button></li> -->
+						<!-- <li><button id="resetZoom" class="btn toolBarBtn" title="Reset Zoom">
+							<i class="fa fa-refresh" aria-hidden="true"></i>
+						</button></li>						
+						
+						<li><button id="zoomInBtn" class="btn toolBarBtn" title="Zoom In">
+							<i class="fa fa-search-plus" aria-hidden="true"></i>
+						</button></li>
+						
+						<li><button id="zoomOutBtn" class="btn toolBarBtn" title="Zoom Out">
+							<i class="fa fa-search-minus" aria-hidden="true"></i>
+						</button></li> -->
+												
+						<!-- <li><button id="liveAnalysis" class="btn toolBarBtn" hidden title="Live Analysis">
+							<span class="badge badge-danger"></span><i class="fa fa-bolt" aria-hidden="true"></i>
+						</button></li> -->
+								
+						<li><button id="print-paper" class="btn toolBarBtn" title="Print">
+							<i class="fa fa-print" aria-hidden="true"></i>
+						</button></li> 
+
+						<li><button id="gis-map-setup" class="btn toolBarBtn" title="Spread Out Nodes" >
+							<i class="fa fa-globe" aria-hidden="true"></i>
+							</button>
+						</li>
+
+						<li><button id="clearpaper" class="btn toolBarBtn"
+									title="Clear All">
+									<i class="fa fa-times" aria-hidden="true"></i>
+								</button></li>
+						
+						<li><button id="updateMap" class="btn toolBarBtn" title="update Map">
+							<i class="fa fa-floppy-o" aria-hidden="true"></i>
+						</button></li>
+						  </ul>
+						  
+						<!-- <ul class="resize-button-ul">
+							<li><button id="zoomInBtn" class="btn toolBarBtn" title="Zoom In">
+								<i class="fa fa-search-plus" aria-hidden="true"></i>
+							</button></li>
+							<li><button id="resetZoom" class="btn toolBarBtn" title="Reset Zoom">
+								Reset
+							</button></li>		
+							
+							<li><button id="zoomOutBtn" class="btn toolBarBtn" title="Zoom Out">
+								<i class="fa fa-search-minus" aria-hidden="true"></i>
+							</button></li>
+						</ul>  -->
+
+						<!-- <div id="paper-navigator"></div> -->
+						  
+					</div>						
+					  
+
+					<div class="tab-content" id="tabs">
+						<div id="canvasId" class="tab-pane zeroPadding in  active col-md-12 col-sm-12">
+						</div>
+						<div ng-app="chassisView" ng-controller="chassisViewController"	id="chassisViewCanvasDiv"
+							class="tab-pane fade col-md-12 col-sm-12" style="overflow:hidden">
+							<div class="row" style="height: 6rem" id="nodeAndRackSelector">
+							<!-- <label ng-show="selectedNetworkView==3" >Select NE</label> -->
+								<div class="col-md-9 col-sm-9" id="nodeSelector">
+									<form class="form-inline" id="nodeIdInputChassisViewForm">
+										<div class="form-group" style="margin-top: 20px;">
+											<label for="selectNodeIdforChassisView">Select Node</label> <select
+												class="form-control" ng-model="selectedNode"
+												ng-options="item for item in names"
+												ng-change="neChangeHandler()">
+											</select>
+										</div>
+
+
+									</form>
+								</div>
+								<div class="col-md-3 col-sm-3" id="rackSelector">
+								 <form class="form-inline" id="rackIdInputChassisViewForm">
+										<div class="form-group" style="margin-top: 20px;">
+											<label for="selectRackIdforChassisView">Select Rack</label> 
+											<select
+												id ="selectRack" class="form-control" ng-model="selectedRack"
+												ng-options="item for item in racks">
+											</select>
+										</div>
+								</form> 
+								</div>
+							</div>
+							<div class="row" style="height:74rem">
+
+								<div class="col-md-12 col-sm-12 col-lg-12" id="chassis-view-col" style="width:100% ; height:100% ; padding:0px">
+								<div class="col-md-12 col-sm-12 col-lg-12" id="chassisCanvasId" style="width:100%; height:100%; padding:0px; /* overflow:auto */">
+										<div id="rack" style="width:100%; height:100%"></div>
+								</div>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div id="opticalPowerCanvasMainContainer"
+							class="tab-pane in col-md-12 col-sm-12">
+
+							<div class="col-md-12 col-sm-12">
+								<form class="form-inline" id="nodeIdInputOpticalPowerForm">
+									<div class="form-group"">
+										<label for="selectDirectionforOpticalPower">NodeId</label> <select
+											class="form-control" id="NodeIdInputOpticalPower">
+										</select>
+									</div>
+									<div class="form-group"">
+										<label for="selectDirectionforOpticalPower">Direction</label>
+										<select class="form-control" id="DirectionInputOpticalPower">
+										</select>
+									</div>
+									<div class="form-group"">
+										<button type="button" class="btn btn-default"
+											id="opticalPowerFormSubmitBtn">Generate</button>
+									</div>
+								</form>
+							</div>
+
+							<div class="col-md-12 col-sm-12 col-lg-12 zeroPadding"
+								id="opticalPowerCanvasContainer">
+								<canvas id="opticalPowerCanvas" style=" padding-left:90px;"></canvas>
+							</div>
+						</div>
+						<!-- <div id="menu2" class="tab-pane fade col-md-12 col-sm-12">
+						<h3>Menu 2</h3>
+						<p>Some content in menu 2.</p> 
+					</div>-->
+					</div>
+
+					<!-- <div class="col-md-12 col-sm-12" id="canvasId"></div> -->
+
+					<!-- <div id="svgPaperInCanvas"></div> -->
+				</div>
+
+				<!-- <div ng-app="chassisView" ng-controller="chassisViewController">
+			<canvas id="chassisFrontCanvas" ng-model="ngChassisFrontCanvas" height=700" width="580" style="background-color:#ffffff;"> </canvas>				
+	   </div> -->
+				<!-- Canvas -->
+
+
+
+				<!-- ContextMenu Start-->
+				<!-- <ul class="custom-menu">
+  			<li data-action = "portaddId" >Add Port</li>  			
+  		    <li data-action = "portremoveId">Remove Port</li>			
+			<li data-action = "deleteId">Delete</li> 	
+		</ul>        -->
+
+				<!-- ContextMenu -->
+
+				<!-- The Modal -->
+				<!-- <div w3-include-html="modal.html"></div>
+            <script>
+               w3IncludeHTML();
+            </script> -->
+
+
+				<!--  <div id="dragBar"></div> -->
+				<!-- Side Bar Start -->
+				<div id="sidebar" class="col-md-3 col-sm-12 zeroPadding side-bar-container">
+
+					<!-- <button id="mybtn" class="btn btn-primary btn-lg btn-default" >Download Map <i class="fa fa-download" aria-hidden="true"></i></button> -->
+		
+					<!-- tabs for various network properties-->
+					<div>
+						<div id="tabularMenu" class="col-md-12 col-sm-12 col-lg-12 zeroPadding">
+							
+							<div class="side-bar-container__content--overlay-container overlay-container">
+									<div class="overlay">
+										<div class="loader-container">
+											<div class="loader"></div>
+										</div>
+										<p class="overlay-text"></p>
+									</div>
+							</div>
+							
+		
+							<!-- Sidebar Resize buttons -->
+							<div class="side-bar-container__sidebar-resize-btn">
+								<div id="expand-sidebar-btn" class="side-bar-container__sidebar-resize-btn--expand" title="Drag to resize">
+									<i class="fa fa-arrows-h"></i>
+								</div>
+								<div id="maximize-sidebar-btn" class="side-bar-container__sidebar-resize-btn--maximize" title="Click to maximize">
+									<i class="fa fa-plus-square"></i>
+								</div>
+							</div>
+		
+							<!-- Sidebar Menu -->
+							<ul class="tabs side-bar-container__menu" data-persist="true">
+		
+								<li>
+									<a href="#network-view">Network
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#nodes-view">Node
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#links-view">Link
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#circuits-view" id="DemandTabTriggerBtn">Circuit
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li>
+								<!-- <li>
+									<a href="#view5">RWA Algorithm
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li> -->
+								<!-- <li><a href="#view6">BOM <i class="fa fa-cog"
+												aria-hidden="true"></i>
+										</a></li>
+										<li><a href="#view7">View Reports <i class="fa fa-cog"
+												aria-hidden="true"></i>
+										</a></li> -->
+								<li>
+									<a href="#demands-view" id="trafficmatrixTabTriggerBtn">View Demand Matrix
+										<i class="fa fa-cog" aria-hidden="true"></i>
+									</a>
+								</li>
+							</ul>
+		
+							<!-- sidebar content tabs -->
+							<div class="tabcontents side-bar-container__content">
+
+								<div id="network-view" class="side-bar-container__network-info">
+									<!-- Network Info tab -->
+								</div>
+								<div id="nodes-view" class="side-bar-container__nodes-info">
+									<!-- Node Info tab -->
+								</div>
+								<div id="links-view" class="side-bar-container__links-info">
+									<!-- Link Info tab -->
+								</div>
+								<div id="circuits-view" class="side-bar-container__circuits-info">
+									<!-- Circuit Info tab -->
+								</div>
+								<!-- <div id="view5" class="side-bar-container__rwa-execute">
+									<button class="btn btn-lg" id="rwaAlgoBtn">Execute RWA Algorithm
+									</button>
+								</div> -->
+								<!-- Demands Info tab -->
+							<div id="demands-view" class="side-bar-container__demands-info">
+								<table class="table" id="DemandMatrixTable">
+									<thead>
+										<tr>
+											<th></th>
+											<th>Traffic Id</th>
+											<th>Source Node</th>
+											<th>Destination Node</th>
+											<!-- <th>Service type</th> -->
+											<th>Protection type</th>
+											<th>Traffic</th>
+											<th>Path</th>
+											<th>RWA Summary</th>
+											<th>Regenerator Location</th>
+											<th>PathType</th>
+											<th>Wavelength</th>
+											<th>Osnr</th>
+											<th>Line Rate</th>
+											<th>SpanLength</th>
+											<th>Cost</th>
+											<th>CD (ps/nm)</th>
+											<th>PMD (ps)</th>
+										</tr>
+									</thead>
+									<tbody>
+	
+										<!-- <tr>
+											<td rowspan="4" class="commonRow">1</td>
+											<td rowspan="4" class="commonRow srcNodeClass">1</td>
+											<td rowspan="4" class="commonRow destNodeClass">3</td>
+											<td rowspan="4" class="commonRow">1</td>
+											<td rowspan="4" class="commonRow">1</td>
+											<td rowspan="4" class="commonRow">30G</td>
+											<td class="pathColumn">1,3</td>
+											<td>null</td>
+											<td>26.333</td>
+											<td>30</td>
+											<td>1 Crore</td>
+										</tr>
+										 <tr>										
+											<td class="pathColumn">1,5,4,3</td>
+											<td>null</td>
+											<td>26.333</td>
+											<td>30</td>
+											<td>1 Crore</td>
+										</tr>
+										<tr>										
+											<td class="pathColumn">1,2,3</td>
+											<td>null</td>
+											<td>26.333</td>
+											<td>30</td>
+											<td>1 Crore</td>
+										</tr>
+										<tr>										
+											<td class="pathColumn">1,4,3</td>
+											<td>null</td>
+											<td>26.333</td>
+											<td>30</td>
+											<td>1 Crore</td>
+										</tr>
+										  -->
+										
+									</tbody>		
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+					<!-- properties tab -->
+					<div
+						class="col-sm-12 col-md-12 col-lg-12 zeroPadding demands-circuit-view"
+						id="demands-circuit">
+						<div class="demands-circuit-view__container">
+							<button class="demands-circuit-view__btn-close"><i class="fa fa-close"></i></button>
+							<h3 class="text-center demands-circuit-view__heading">
+								<strong>Circuits</strong>
+							</h3>
+							<div class="panel-body demands-circuit-view__content"></div>
+						</div>
+					</div>
+					<!-- properties  -->
+				</div>
+				<!-- Side Bar -->
+
+
+				<!-- Modal for Create map -->
+				<div id="createMapModal" class="modal fade" role="dialog"  
+				data-backdrop="static" data-keyboard="false">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content" id="modalContentCreateMap">
+							<!-- <div class="modal-header">
+							    <h6 class="text-center">Create New Map</h6>
+								<button type="button" class="close pull-right" data-dismiss="modal">
+									<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+								</button>
+							</div> -->
+							<div class="modal-body" id="modalBodyCreatemap">
+								<div class="row modal-body__header">
+									<div class="col-sm-12 col-md-12 " id="nptModal">
+										<!-- <h6 class="text-center">Network Planning Tool</h6> -->
+										<h1 class="text-center mb-5 createMapModalHeading">
+										<!-- <p>
+											<img alt="" class="img-responsive text-center" style="height:40px;margin:auto;"
+												src="images/logo.png">
+										</p> -->
+										Create New Network
+										</h1>
+										<hr class="createMapModalHeadingHr m-0"></hr>
+										<!-- <h1 class="text-center">Planning </h1>
+                              <h1 class="text-center">Tool</h1> -->
+										<!-- <p>
+											<img alt="" class="img-responsive "
+												src="images/network-image.png">
+										</p> -->
+									</div>
+
+								</div>
+								<div id="form-image-cont-modal" class="row">
+									<form id="createMapInputForm" name="createMapForm" ng-controller="createMapController" novalidate>
+										<div class="form-group col-md-12">
+											<label for="createMapName" class="text-primary">
+												Network Name<span class="requiredField">*</span>
+											</label> 
+											<input name="NetworkName" type="text" class="form-control"
+												onfocus="this.placeholder = ''" placeholder="Enter Network Name" 
+												id="createMapName" ng-model="NetworkName" maxlength="20" autofocus required network-name-directive>
+											</input>
+											<span style="color:red" ng-show="createMapForm.NetworkName.$touched && createMapForm.NetworkName.$invalid">
+												<span ng-show="createMapForm.NetworkName.$error.required">Network Name is required.</span>
+												<span ng-show="createMapForm.NetworkName.$error.networkNameValidity">Only alphabets,numbers and underscore is allowed.</span>
+											</span>
+										</div>
+										<div class="form-group col-md-6 ">
+											<label for="createMapNoOfNodes" class="text-primary">Number
+												of Nodes<!-- <span class="requiredField">*</span> -->
+											</label>
+											<input type="number" min="0" max="64" class="form-control" value="0" name="NumOfNodes"
+												onfocus="this.placeholder = ''"
+												placeholder="Number of Nodes" id="createMapNoOfNodes" ng-model="NumOfNodes" required>
+											</input>
+											<span style="color:red" ng-show="createMapForm.NumOfNodes.$touched && createMapForm.NumOfNodes.$invalid">
+													<span ng-show="createMapForm.NumOfNodes.$error.required">Required.</span>
+													<span ng-show="createMapForm.NumOfNodes.$error.number">Should be a number.</span>
+											</span>
+										</div>
+										<div class="form-group col-md-6 ">
+											<label for="createMapTopology" class="text-primary">Network
+												Topology<span class="requiredField">*</span>
+											</label> <select class="form-control" id="createMapTopology" name="Topology">
+												<!-- <option value="Mesh" selected>Mesh</option> -->
+												<option >Close Ring</option>
+												<option >Hub Ring</option>
+												<option >Linear</option>
+												<option  selected>Mesh</option>
+												<!-- <option  value="Closed-Two Fibre Ring">Closed-Two Fibre Ring</option> -->
+											</select>
+											<!-- <input type="text" class="form-control" placeholder="Mesh" id="createMapTopology"></input>	 -->
+										</div>
+										
+										<div class="form-group col-md-6 ">
+											<label for="createMapCountryCode" class="text-primary">CC (Country Code)<span class="requiredField">*</span>
+											</label> <select class="form-control" id="createMapCountryCode" name="CountryCode">
+												<!-- <option value="Mesh" selected>Mesh</option> -->
+												<option value="356" selected>INDIA</option>
+												<option value="840" >USA</option>
+												<option value="826" >UK</option>
+											</select>
+										</div>
+										
+										<div class="form-group col-md-6 ">
+											<label for="createMapIcc" class="text-primary">ICC (ITU-T Carrier Code)<span class="requiredField">*</span>
+											</label> 
+											<select class="form-control" id="createMapIcc" name="CarrierCode">
+												<!-- <option value="Mesh" selected>Mesh</option> -->
+												<option selected>DTS</option>
+												<option >VSNL</option>
+											</select>
+										</div>
+										
+										<div class="form-group col-md-6 ">
+											<label for="createMapUAPCode"  class="text-primary">UAPC(Unique Access Point Code)<span class="requiredField">*</span>
+											</label> <input type="text" class="form-control" name="UniqueCode"
+												onfocus="this.placeholder = ''"
+												placeholder="UAPC" id="createMapUAPCode">
+											</input>
+										</div>
+
+										<div class="form-group col-md-12 " id="createNetworkError">
+											
+										</div>
+
+										<!-- <div class="form-group">
+						 <label for="createMapZone" text-primary">Area/Zone<span class="requiredField">*</span></label>
+						 <input type="text" class="form-control" onfocus="this.placeholder = ''" placeholder="Ladakh" id="createMapZone"></input>						 
+						 </div>
+						 <div class="form-group">
+						 <label for="createMapServiceProvider" text-primary">Service Provider<span class="requiredField">*</span></label>
+						 <input type="text" class="form-control" placeholder="CDOT" onfocus="this.placeholder = ''" id="createMapServiceProvider"></input>						 
+						 </div> -->		
+									<div class="form-group col-md-12">
+										<button type="submit" class="createMapBtn col-md-6" id="modalCreateMapBtn" 
+										ng-disabled="createMapForm.NumOfNodes.$invalid || createMapForm.NetworkName.$invalid">
+											<i class="fa fa-file" aria-hidden="true"></i> Create</button>
+									
+										<button class="btn-danger backToDashboardBtn dashboard-redirect col-md-6">
+											<i class="fa fa-arrow-left" aria-hidden="true"></i> Go back to dashboard</button>
+									
+									</div>
+											
+									</form>
+								</div>
+
+							</div>
+							<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Create New Map</button>
+					</div> -->
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+
+				<!-- Modal for Create map -->
+				<div id="loadingModal" class="modal fade" role="dialog"
+					data-backdrop="static" data-keyboard="false">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content" id="modalLoadingContentOuter">
+							<!-- <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">
+									<i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+								</button>
+							</div> -->
+							<div class="modal-body" id="modalLoadingContent">
+								<div class="row">
+									<div class="col-sm-12 col-md-12">
+										<!-- <h1>NETWORK PLANNING TOOL</h1> -->
+										<!-- <img class="img-responsive" src="images/NptLogo.png" alt="" /> -->
+									</div>
+									<div class="col-sm-12 col-md-12 " id="nptModal">
+										<img src="images/loading.gif" alt=""
+											class="img-responsive text-center" />
+										<p class="text-muted text-center"></p>
+									</div>
+
+								</div>
+								<div class="modal-footer">
+									<button type="button"
+										class="btn btn--danger btn--circle loadingModalCloseBtn"
+										data-dismiss="modal">X</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+				
+				
+
+
+				<!-- Modal for BOM  -->
+				<div id="bomModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent"
+							id="modalContentBom">
+							<!-- <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div> -->
+							<div class="modal-body genericModalBody" id="modalBodyBom">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div
+											class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading"
+											id="modalBodyBomHeadPanelHeading">
+											<p id="bomViewMainHeading">
+												Equipment Data												
+											</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+
+										</div>
+									</div>
+									<!--<div class="col-sm-12 col-md-12 genericModalBodyHeadPanel"
+										id="modalBodyBomHeadPanel">
+										<div class="col-md-3 col-sm-3">
+											<form class="form-inline">
+												<div class="form-group">
+													<label for="bomNodeId">Select Node</label> <select
+														class="form-control" id="bomNodeId"">
+														<option value="0">Default</option>
+													</select>
+												</div>
+											</form>
+										</div>
+										<div class="col-md-9 col-sm-9">
+											<div class="half-div">
+												<p>
+													Site Name: <span id="bomSiteName">Default Site Name</span>
+												</p>
+												<p>
+													Station Name : <span id="bomStationName">Default
+														Station Name</span>
+												</p>
+												<p>
+													Total Cost ($) : <span id="bomTotalCost">Default
+														Total Cost</span>
+												</p>
+											</div>
+											<div class="half-div">
+												<p>
+													Total Power Consumption (Watt): <span id="bomPowerCons">50</span>
+												</p>
+												<p>
+													Total Power Consumption(Typical) (Watt): <span
+														id="bomPowerConsTypical">55</span>
+												</p>
+												<!-- <p>Total Cost : <span id="bomTotalCost">Default Total Cost</span></p> -->
+									<!-- 	</div>
+										</div>
+
+									</div>
+								 	<div class="col-md-12 col-sm-12 zeroPadding"
+										id="modalBodyBomTabMenu">
+
+										<button class="btn activeFocus"
+											id="modalBodyBomTabMenuBomTrigger">Bill of Material</button>
+										<button class="btn" id="modalBodyBomTabMenuEquipmentTrigger">Equipment
+											List</button>
+										<button class="btn"
+											id="modalBodyBomTabMenuEquipmentPrefTrigger">Equipment
+											Preferences</button>
+
+									</div> -->
+									<!-- <div class="col-md-12 col-sm-12 zeroPadding" id="modalBodyBomTabMenu" >									 
+									   <p id="nodeIdHeading">BOM View for Node Id </p>									  
+									</div> -->
+									<div class="col-sm-12 col-md-12 genericModalBodyContentPanel">
+										<div class="col-sm-12 col-md-12"
+											id="modalBodyBomContentPanelBom">
+											<table
+												class=" table modalBodyBomContentPanelBomTable tablesorter modalGenericTable">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Quantity</th>
+														<th>Unit Price (INR)</th>
+														<th>Total Price (INR)</th>
+														<th>Part No.</th>
+														<th>Revision Code</th>
+														<th>Category</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyBomContentPanelEquipmentPref">
+											<table
+												class=" table table-bordered modalBodyBomContentPanelEquipmentPrefTable modalGenericTable">
+												<thead>
+													<tr>
+														<th>Node Id</th>
+														<th>Card Type</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyBomContentPanelEquipment">
+											<table
+												class=" table table-striped modalBodyBomContentPanelEquipmentTable modalGenericTable">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Part No</th>
+														<th>Power Consumption (Db)</th>
+														<th>Slot Size</th>
+														<th>Details</th>
+														<th>Price (INR)</th>
+														<th>Revision Code</th>
+														<!-- <th>Category</th> -->
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+							<!-- 	<span class="savePreferencesAlert"></span>
+								<button type="button" class="btn btn-default"
+									id="savePreferencesBom">
+									Save Preferences <i class="fa fa-save" aria-hidden="true"></i>
+								</button>-->
+								<button type="button" class="btn btn-default"
+									onclick="fSaveAsPdfBomData()" id="downloadPdfBomViewData">
+									Save as PDF <i class="fa fa-download" aria-hidden="true"></i>
+								</button>
+								<button type="button" class="btn btn-default"
+									id="downloadBomViewData">
+									Download as Excel File <i class="fa fa-download"
+										aria-hidden="true"></i>
+								</button> 
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">
+									Close <i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+				
+				<!-- Modal for Separate Equipment -->
+					<div id="equipmentModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent" 	id="modalContentviewEquipment">					
+							<div class="modal-body genericModalBody" id="modalBodyviewEquipment">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading"	id="modalBodyEquipmentHeadPanelHeading">
+											<p id="equipmentViewMainHeading">Equipment Data</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+									
+								
+									
+									<!-- Body Panel -->
+								<div class="col-sm-12 col-md-12  genericModalBodyContentPanel"
+											id="modalBodyEquipmentContentPanelEquipment">
+											<table
+												class=" table table-striped modalBodyEquipmentContentPanelEquipmentTable modalGenericTable">
+												<thead>
+												<tr>
+														<th>Name</th>
+														<th>Part No</th>
+														<th>Power Consumption (Db)</th>
+														<th>Slot Size</th>
+														<th>Details</th>
+														<th>Price (INR)</th>
+														<th>Revision Code</th>
+														<th>Category</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+								<button type="button" class="btn btn--default"	data-dismiss="modal">Close <i class="fa fa-times" aria-hidden="true"></i>	</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal End :  for Separate Equipment -->
+				
+				<!-- Modal for view Report  -->
+				<div id="viewReportModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent"
+							id="modalContentviewReport">
+							<!-- <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div> -->
+							<div class="modal-body genericModalBody" id="modalBodyviewReport">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div
+											class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading"
+											id="modalBodyBomHeadPanelHeading">
+											<p id="viewReportViewMainHeading">Bill of Material(BOM)</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 genericModalBodyHeadPanel"
+										id="modalBodyviewReportHeadPanel">
+										<div class="col-md-3 col-sm-3 zeroPadding viewReportInputFormDiv">
+											<form class="form-inline viewReportInputForm">
+												<div class="form-group">
+													<label for="viewReportNodeId">Select Node : </label> <select
+														class="form-control" id="viewReportNodeId">
+														<option value="0">Default</option>
+													</select>
+												</div>
+											</form>
+										</div>
+										<div class="col-md-9 col-sm-9 node-info-div-view-report">
+											<!-- <div class="half-div"> -->
+											<div class="label-card">
+												<h4 class="label-card-title">Network Name</h4>
+												<p class="label-card-text">
+													<span id="viewReportNetworkName">Default Network Name</span>
+												</p>
+											</div>
+											<!-- <div class="label-card">
+												<h4 class="label-card-title">Site Name</h4>
+												<p class="label-card-text">
+													<span id="viewReportSiteName">Default Site Name</span>
+												</p>
+											</div>
+
+											<div class="label-card">
+												<h4 class="label-card-title">Station Name</h4>
+												<p class="label-card-text">
+													<span id="viewReportStationName">Default Site Name</span>
+												</p>
+											</div> -->
+
+											<div class="label-card">
+												<h4 class="label-card-title">Total Cost (INR)</h4>
+												<p class="label-card-text">
+													<span id="viewReportTotalCost">Default Site Name</span>
+												</p>
+											</div>
+
+											<div class="label-card">
+												<h4 class="label-card-title">Total Power Consumption
+													(Watt)</h4>
+												<p class="label-card-text">
+													<span id="viewReportPowerCons">Default Site Name</span>
+												</p>
+											</div>
+
+											<div class="label-card">
+												<h4 class="label-card-title">Total Power
+													Consumption(Typical) (Watt)</h4>
+												<p class="label-card-text">
+													<span id="viewReportPowerConsTypical">Default Site
+														Name</span>
+												</p>
+											</div>
+
+											<!-- <p>
+													Station Name : <span id="viewReportStationName">Default
+														Station Name</span>
+												</p>
+												<p>
+													Total Cost ($) : <span id="viewReportTotalCost">Default
+														Total Cost</span>
+												</p> -->
+											<!-- </div>
+											<div class="half-div">
+												<p>
+													Total Power Consumption (Watt): <span
+														id="viewReportPowerCons">50</span>
+												</p>
+												<p>
+													Total Power Consumption(Typical) (Watt): <span
+														id="viewReportPowerConsTypical">55</span>
+												</p>
+												<p>Total Cost : <span id="bomTotalCost">Default Total Cost</span></p>
+											</div> -->
+										</div>
+
+									</div>
+									<div class="col-md-12 col-sm-12 zeroPadding"
+										id="modalBodyviewReportTabMenu">
+
+										<ul class="nav nav-pills">
+											<li class="active"
+												id="modalBodyviewReportTabMenuBomTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelBom">Bill of
+													Material</a></li>
+											<li id="modalBodyviewReportTabMenugenerateNodeIPTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelviewNodeReport">Node
+													IPScheme</a></li>
+											<li id="modalBodyviewReportTabMenugenerateLinkIPTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelviewLinkReport">Link
+													IPScheme</a></li>
+											<li id="modalBodyviewReportTabMenuwavelengthConfiTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelwavelengthConfi">Client
+													Configuration</a></li>
+											<li id="modalBodyviewReportTabMenuMPNInfoConfiTrigger"><a
+												data-toggle="pill" 
+												href="#modalBodyviewReportContentPanelMPNConfi">MPN Information</a></li>
+											<li id="modalBodyviewReportTabMenuInventoryTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelInventory">Inventory</a></li>
+											<li id="modalBodyviewReportTabMenuOpticalPowerTrigger"><a
+												data-toggle="pill"
+												href="#modalBodyviewReportContentPanelOpticalPower">Optical Power</a></li>
+										</ul>
+
+										<!-- <button class="btn activeFocus"
+											id="modalBodyviewReportTabMenuBomTrigger">Bill of
+											Material</button>
+										<button class="btn"
+											id="modalBodyviewReportTabMenugenerateNodeIPTrigger">Node
+											IPScheme</button>
+										<button class="btn"
+											id="modalBodyviewReportTabMenugenerateLinkIPTrigger">Link
+											IPScheme</button>
+										<button class="btn"
+											id="modalBodyviewReportTabMenuwavelengthConfiTrigger">Client
+											Configuration</button>
+										<button class="btn"
+											id="modalBodyviewReportTabMenuMPNInfoConfiTrigger">MPN Information</button>	
+										<button class="btn"
+											id="modalBodyviewReportTabMenuInventoryTrigger">Inventory</button>		
+											<button class="btn"
+											id="modalBodyviewReportTabMenuOpticalPowerTrigger">Optical Power</button> -->	
+										<!-- <button class="btn" id="modalBodyviewReportTabMenuopticalPowerConfiTrigger">Optical Power</button> -->
+										<!-- <button class="btn" id="modalBodyviewReportTabMenucablingDiagramTrigger">Cabling Diagram</button> -->
+
+									</div>
+									<!-- <div class="col-md-12 col-sm-12 zeroPadding" id="modalBodyBomTabMenu" >									 
+									   <p id="nodeIdHeading">BOM View for Node Id </p>									  
+									</div> -->
+									<div class="col-sm-12 col-md-12 genericModalBodyContentPanel">
+											<div class="col-sm-12 col-md-12"
+											id="modalBodyviewReportContentPanelBom">
+											<table
+												class=" table modalBodyviewReportContentPanelBomTable tablesorter modalGenericTable">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Quantity</th>
+														<th>Unit Price (INR)</th>
+														<th>Total Price (INR)</th>
+														<th>Part No.</th>
+														<th>Revision Code</th>
+														<th>Category</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyviewReportContentPanelviewNodeReport">
+											<table
+												class=" table table-bordered modalBodyviewReportContentPanelviewNodeReportTable modalGenericTable">
+												<thead>
+													<tr>
+														<th>Network Id</th>
+														<th>Node Id</th>
+														<th>Lct IP</th>
+														<th>Router IP</th>
+														<th>SCP IP</th>
+														<th>MCP IP</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyviewReportContentPanelviewLinkReport">
+											<table
+												class=" table table-bordered modalBodyviewReportContentPanelviewLinkReportTable modalGenericTable">
+												<thead>
+													<tr>
+														<th>Network Id</th>
+														<th>Link Id</th>
+														<th>Link IP</th>
+														<th>Source IP</th>
+														<th>Destination IP</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyviewReportContentPanelInventory">
+											<table
+												class=" table table-striped modalBodyviewReportContentPanelInventoryTable">
+												<thead>
+													
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyviewReportContentPanelwavelengthConfi">
+											<table
+												class=" table table-striped modalBodyviewReportContentPanelwavelengthConfiTable">
+												<thead>
+													
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="col-sm-12 col-md-12 text-center"
+											id="modalBodyviewReportContentPanelOpticalPower" >
+											<ul class="nav nav-pills">
+												<li class="active"
+													id="modalBodyviewReportContentPanelOpticalPowerAddBtn"><a
+													data-toggle="pill" href="#">Add</a></li>
+												<li	id="modalBodyviewReportContentPanelOpticalPowerDropBtn"><a
+													data-toggle="pill" href="#">Drop</a></li>
+											</ul>
+											<!-- <button class="btn activeFocus" class="col-sm-6 col-md-6" id="modalBodyviewReportContentPanelOpticalPowerAddBtn" > Add
+											</button>
+											<button class="btn" class="col-sm-6 col-md-6" id="modalBodyviewReportContentPanelOpticalPowerDropBtn" > Drop
+											</button> -->
+											<table
+												class=" table table-striped modalBodyviewReportContentPanelOpticalPowerAddTable">
+												<thead>
+													
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+											<table
+												class=" table table-striped modalBodyviewReportContentPanelOpticalPowerDropTable">
+												<thead>
+													
+												</thead>
+												<tbody>
+												</tbody>
+											</table>											
+										</div>
+										
+										<div class="col-sm-12 col-md-12 "
+											id="modalBodyviewReportContentPanelMPNConfi">
+											<table
+												class=" table table-striped modalBodyviewReportContentPanelMPNConfiTable">
+												<thead>
+													<tr>
+														<th>Demand</th>													
+														<th>Physical Location</th>
+														<th>Direction</th>
+														<th>LineRate</th>
+														<th>Utilized BW</th>
+														<th>Remaining BW</th>														
+														<th>Source</th>
+														<th>Destination</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+
+										<!-- <div class="col-sm-12 col-md-12"
+											id="modalBodyviewReportContentPanelCablingDiagram">
+											<table
+												class=" table table-bordered modalBodyviewReportContentPanelCablingDiagramTable tablesorter modalGenericTable">
+												<thead>
+													<tr>
+														<th>NodeId</th>
+														<th>Equipment</th>
+														<th>Cord Type</th>
+														<th>Source Card Type</th>
+														<th>Source Location</th>
+														<th>Source Port</th>
+														<th>Target Card Type</th>
+														<th>Target Location</th>
+														<th>Target Port</th>
+														<th>Length</th>
+														<th>Direction</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div> -->
+									</div>
+
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+								<!-- <span class="savePreferencesAlert"></span>
+						<button type="button" class="btn btn-default"
+								id="savePreferencesviewReport">Save Preferences <i class="fa fa-save" aria-hidden="true"></i> </button>
+						<button type="button" class="btn btn-default" onclick="fSaveAsPdfBomData()"
+								id="downloadPdfviewReportViewData">Save as PDF <i class="fa fa-download" aria-hidden="true"></i> </button>
+						-->
+								<button type="button" class="btn btn--default"
+								id="ViewReportSaveAsXlsBtn">Download as Excel File <i class="fa fa-download" aria-hidden="true"></i> </button> 
+								<button id="ViewReportSaveAsPdfBtn" class="btn btn--default" type="button">Save as PDF</button>
+								<button type="button" class="btn btn--default"
+									data-dismiss="modal">
+									Close <i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+
+				<!-- Modal for Chassis View  -->
+				<div id="chassisViewModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+
+						<!-- Modal content-->
+						<div class="modal-content" id="modalContentBom">
+							<!-- <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div> -->
+							<div class="modal-body" id="modalBodyBom">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div class="col-md-6 col-sm-6"
+											id="modalBodyBomHeadPanelHeading">
+											<p>Chassis View</p>
+										</div>
+									</div>
+
+									<div class="col-md-12 col-sm-12 zeroPadding"
+										id="modalBodyBomTabMenu">
+
+										<button class="btn" id="modalBodyBomTabMenuBomTrigger">Tabular
+											View</button>
+										<button class="btn" id="modalBodyBomTabMenuEquipmentTrigger">Graphical
+											View</button>
+
+									</div>
+									<div class="col-sm-12 col-md-12 "
+										id="modalBodyBomContentPanelBom">
+										<table
+											class=" table table-striped modalBodyCvContentPanelChassisTabulaView">
+											<thead>
+												<tr>
+													<th>Rack</th>
+													<th>SubRack</th>
+													<th>Card</th>
+													<th>Card Type</th>
+												</tr>
+											</thead>
+											<tbody>
+											</tbody>
+										</table>
+									</div>
+
+									<div class="col-sm-12 col-md-12 "
+										id="modalBodyCvContentPanelChassisGarphicalView"></div>
+
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn--default"
+									data-dismiss="modal">Close</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+
+				<!-- Modal for Cabling Diagram  -->
+				<div id="cablingModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent"
+							id="modalContentCabling">
+							<!-- <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div> -->
+							<div class="modal-body genericModalBody" id="modalBodyCabling">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div
+											class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading">
+											<p id="cablingViewMainHeading">
+												CONNECTIVITY TABLE												
+											</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+									<div class="col-sm-12 col-md-12 genericModalBodyHeadPanel">
+										
+										<!-- Overlay effect for Loading and Saving -->
+										<div class="overlay-container cablingModal-overlay-container">
+											<div class="overlay">
+														<div class="loader-container"><div class="loader"></div></div>
+														<p class="overlay-text"></p>
+											</div>
+										</div>
+										<!-- Overlay End -->
+										
+										<div class="npt-form-inline-container">
+											<form class="form-inline npt-form-inline"
+												id="cablingInputForm">
+												<div class="form-group">
+													<label for="cablingNodeId">Select Node</label> <select
+														class="form-control" id="cablingNodeId">
+														<option value="0">All</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="cablingCardType">Select Card Type</label> <select
+														class="form-control" id="cablingCardType">
+														<option value="0">All</option>
+													</select>
+												</div>
+												<!-- <div class="form-group">
+													<button class="btn" type="button"
+														id="cablingModalFormFilterTrigger">Submit</button>
+												</div> -->
+											</form>
+										</div>
+
+									</div>
+									<div class="col-sm-12 col-md-12 genericModalBodyContentPanel">
+										<div class="col-sm-12 col-md-12"
+											id="modalBodyCablingContentPanelBom">
+											<table id="CablingContentPanelBomTable"
+												class=" table table-bordered modalBodyCablingContentPanelBomTable tablesorter modalGenericTable">
+												<thead>
+													<tr>
+														<td>S.No.</td>
+														<th>NodeId</th>
+														<th>Equipment</th>
+														<th>Chord Type</th>
+														<th>Part Code</th>
+														<th>Source Card Type</th>
+														<th>Source Location</th>
+														<th>Source Port</th>
+														<th>Target Card Type</th>
+														<th>Target Location</th>
+														<th>Target Port</th>
+														<th>Length</th>
+														<th>Direction</th>
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+							<button id="CablingDiagramPrintBtn" class="btn btn--default" type="button">Save as PDF</button>
+								<button type="button" class="btn btn--default"
+									data-dismiss="modal">
+									Close <i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+
+				<!-- Modal for OnlineView  -->
+				<div id="onlineReportModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent" 	id="modalContentviewReport">					
+							<div class="modal-body genericModalBody" id="modalBodyviewReport">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading"	id="modalBodyOnlineReportHeadPanelHeading">
+											<p id="viewReportViewMainHeading">Config File Display</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+									
+									<!-- Choose File From Here -->
+									<div class="col-md-12 col-sm-12 zeroPadding" 	id="modalBodyviewReportTabMenu">
+												<div class="half-div">
+												<label style="margin:44px; font-size:large;">
+														Please Browse Through  the Config File and Select the One : 
+												</label>
+												</div>
+											
+												<div class="half-div">
+												<p>
+															<input type="file" accept=".xml" id="uploadedConfigFile" name="files[]" multiple />
+															<output id="list"></output>															
+												</p>
+												</div>
+												
+													<!-- <input type="file" accept=".xml" id="uploadedConfigFile"
+														name="files[]" multiple />
+													<output id="list"></output> -->
+																								
+												</div> 
+									</div>
+									
+									<!-- Body Panel -->
+									<div class="col-sm-12 col-md-12 genericModalBodyContentPanel" id="modalBodyOnlineReportContentPanel">
+												<!-- Fill it With the Uploaded Content -->
+												<pre class="prettyprint" id="xml">
+												</pre>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+							
+								<button type="button" class="btn btn--default"	data-dismiss="modal">Close <i class="fa fa-times" aria-hidden="true"></i>	</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal Ends : OnlineView -->
+				
+				
+								<!-- Modal for Cabling Diagram  -->
+				<div id="statusCheckModal" class="modal fade " role="dialog">
+					<div class="modal-dialog genericModalDialog">
+
+						<!-- Modal content-->
+						<div class="modal-content genericModalContent"
+							id="modalContentCabling">
+							<!-- <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div> -->
+							<div class="modal-body genericModalBody" id="modalBodyCabling">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 zeroPadding">
+										<div
+											class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading">
+											<p id="cablingViewMainHeading">
+												NPT FLOW STATUS											
+											</p>
+											<button type="button" class="btn btn--danger pull-right"
+													data-dismiss="modal">
+													<i class="fa fa-times" aria-hidden="true"></i>
+												</button>
+										</div>
+									</div>
+									
+									<div class="col-sm-12 col-md-12 genericModalBodyContentPanel">										
+											<table class=" table table-bordered statusCheckTable tablesorter modalGenericTable">
+												<thead>
+													<tr>
+														<td>Task</td>
+														<th>Status</th>														
+													</tr>
+												</thead>
+												<tbody>
+												</tbody>
+											</table>
+									</div>
+
+								</div>
+							</div>
+							<div class="modal-footer genericModalFooter">
+								<button type="button" class="btn btn--default"
+									data-dismiss="modal">
+									Close <i class="fa fa-times" aria-hidden="true"></i>
+								</button>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Modal Ends -->
+
+
+				</div>
+			</div>
+			<!-- Content Area End -->
+
+
+<div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog genericModalDialog">
+      <!-- Modal content-->
+      <div class="modal-content genericModalContent">
+         <div class="modal-body genericModalBody">
+            <div class="row">
+               <div class="col-md-12 col-sm-12 zeroPadding">
+                  <div class="col-md-6 col-sm-6 genericModalBodyHeadPanelHeading">
+                     <p>Updated ReversePath Data</p>
+                     <button type="button" class="btn btn--danger pull-right"
+                        data-dismiss="modal">
+                     <i class="fa fa-times" aria-hidden="true"></i>
+                     </button>
+                  </div>
+               </div>
+               <!-- Body Panel -->
+               <div class="col-sm-12 col-md-12  genericModalBodyContentPanel" >
+                  <table
+                     class=" table table-striped modalBodyReversePathContentPanelTable modalGenericTable">
+                     <thead>
+                        <tr>
+                           <th>NetworkId</th>
+                           <th>NodeId</th>
+                           <th>Attribute</th>
+                           <th>Old</th>
+                           <th>New</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div class="modal-footer genericModalFooter">
+            <button type="button" class="btn btn--default"    data-dismiss="modal">Close <i class="fa fa-times" aria-hidden="true"></i>	</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+        <!-- Footer -->
+		<footer>
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+			    <div class="minmaxCon"></div>  
+				<p class="text-center">NPT Copyright@Cdot,2017</p>
+				<div id="networkStatusDiv"></div>  
+			</div>
+		</div>
+		</footer>
+        <!-- Footer Ends -->        
+	</div>
+	<!-- main container ends -->
+	<!-- **************Scripts section starts********************************-->
+	<script src="js/globalConstants.js"></script>
+	<script src="js/scriptConstants.js"></script>
+	<!-- Jointjs -->
+	<!--<script src="js/jointjs/lodash.min.js"></script>
+      <script src="js/jointjs/jquery.min.js"></script>
+      <script src="js/jointjs/backbone.min.js"></script>
+      <script src="js/jointjs/joint.min.js"></script> 
+      <script src="js/jointjs/underscore.js"></script>  -->
+
+	 <!-- <script src="js/jointjs/lodash.min.js"></script>
+     <script src="js/jointjs/jquery.min.js"></script>
+     <script src="js/jointjs/backbone.min.js"></script> -->
+
+
+
+	<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script> 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>-->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script> -->
+
+	<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+	<!-- Rappid/JointJS dependencies: -->
+	<script src="node_modules/jquery/dist/jquery.js"></script>
+	<script src="node_modules/lodash/lodash.js"></script>
+	<script src="node_modules/backbone/backbone.js"></script>
+	<script src="node_modules/graphlib/dist/graphlib.core.js"></script>
+	<script src="node_modules/dagre/dist/dagre.core.js"></script>
+	<script src="js/jointjs/jquery-ui.js"></script>
+	<script src="/styles/Bootstrap/js/bootstrap.min.js"></script>
+	<script src="styles/Bootstrap-Editable/bootstrap-editable.min.js"></script>
+	<script src="js/rappid/rappid.js"></script>	
+	
+	<script src="js/jointjs/paperUtils.js"></script>
+	<script src="js/ilaInsertion.js"></script>
+
+	<!--Init Angular-->
+	<script src="/js/angularJs/angular-init.js"></script>	
+
+	<!--Controllers-->
+	<script src="/js/angularJs/controllers/main-controller.js"></script>	
+
+	<script src="/js/angularJs/chassisJs/Models/chassisModels.js"></script>
+	<script src="/js/angularJs/chassisJs/chassisViewNgInit.js"></script>
+	<script src="/js/angularJs/chassisJs/chassisViewNg.js"></script>
+	<script src="/js/angularJs/chassisJs/EventHandlers/chassisEvents.js"></script>
+	<script src="/js/contextMenu/contextMenu.js"></script>
+	<script src="/js/angularJs/generateCanvasBase64String.js"></script>
+
+
+	<!-- <script src="js/jointjs/joint.min.js"></script>    -->
+	<!-- <script src="js/jointjs/joint-2.1.min.js"></script> -->
+	<!-- <script src="js/rappid.js"></script> -->
+	<!--  <script src="js/jointjs/rappid.js"></script>  -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/1.0.1/joint.min.js"></script>   -->
+
+	<script src="js/nwMap/nwMapHome.js"></script>
+	<script src="js/nwMap/nwMapHomeEvents.js"></script>
+	<script src="js/nwMap/nwMapUtility.js"></script>
+	<script src="js/nwMap/reversepath.js"></script>
+	<script src="js/nwMap/faultAnalysis.js"></script>
+	<script src="js/nwMap/configurationPane/configPaneUtility.js"></script>
+	<script src="js/nwMap/configurationPane/accordion.js"></script>
+	<script src="js/nwMap/configurationPane/tabcontent.js"></script>
+
+	<!-- Joint JS Folder scripts -->
+	<script src="js/nwMap/mapModels/map-models.js"></script>
+	<script src="/js/jointjs/drag-drop.js"></script>
+	<script src="/js/jointjs/events.js"></script>
+	<script src="js/jointjs/createMap.js"></script>
+	<script src="js/LinkNodeConfig.js"></script>
+	<script src="js/configuration.js"></script>
+	<script src="js/preferences.js"></script>
+
+	
+	<script src="/js/demand.js"></script>
+	
+	<script src="/js/context-menu.js"></script>
+	<script src="js/footable.min.js"></script>
+	<script src="js/onlineConfigFileView.js"></script>
+	<script src="js/split-resize.js"></script>
+
+ 	<!--GIS : map files start -->
+			<!-- <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+			integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+			crossorigin=""></script>
+
+			 <script type="text/javascript" src="js/mapjs/leaflet-search.min.js"></script>
+			<link rel="stylesheet" href="js/mapjs/leaflet-search.min.css" />
+			<link rel="stylesheet" href="js/mapjs/Control.FullScreen.css" />
+			<script src="js/mapjs/Control.FullScreen.js"></script>
+			<script src="js/mapjs/Control.OSMGeocoder.js"></script>
+			<link rel="stylesheet" href="js/mapjs/Control.OSMGeocoder.css" />  -->
+	<!--GIS : End -->
+		  
+
+	<!--  <script src="js/liveAnalysis.js"></script>  -->
+	<script src="js/bom.js"></script>
+	<script src="js/equipment.js"></script>
+	<script src="js/viewReport.js"></script>
+	<script src="js/printReport.js"></script>
+	<script src="js/opticalPower.js"></script>
+	<script src="js/cablingDiagram.js"></script>
+	<script src="js/print.js"></script>
+	<script src="js/printjs/jspdf.min.js"></script>
+	<script src="js/printjs/jspdf.plugin.autotable.js"></script>
+
+	<!--  <script src="js/typed.js"></script> -->
+	<script src="js/table-sort/jquery.tablesorter.min.js"></script>
+
+	<script src="js/modal/bootbox.min.js"></script>
+	<script src="js/modal/GenerateIPSchemeModal.js"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
+	<script src="js/jointjs/mousewheel.min.js"></script>
+	<!--  prettyxml  -->
+	<script src="js/prettyxml/vkbeautify.js"></script>
+	<!-- just to indent the xml-->
+	<!-- now we load all the styles for coloring languages-->
+
+	<!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC75dumiC0em2MWC-rkoJBbdnyY_V9KlFM&callback=initMap">
+    </script>  -->
+    
+    <!--GIS : Map dependencies Start-->
+	<script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+			integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+			crossorigin=""></script>
+	<script src="js/mapjs/Control.FullScreen.js"></script>
+	<script src="js/mapjs/Control.OSMGeocoder.js"></script>
+	<script src="js/mapjs/map.js"></script>
+	<!--GIS : End->
+
+ 
+		
+	<!-- Customise js -->
+	<script type="text/javascript">
+         $(document).ready(function(){
+         //$('#createMapModal').modal('show');
+        //console.log("Loaded");   
+       	// console.log("Window Loaded"); 
+       
+       		//adjust height of sidebar and Network Element Bar 
+        //	 adjustSideBarHeightOnLOad();
+            });
+      </script>
+	<!-- **************Scripts section ends********************************-->
+
+	<script type="text/xml" id="xml2">
+		<data>
+		<test>10</test>
+		<test>20</test>
+		</data>
+	</script>
+
+
+
+</body>
+
+</html>
+
+

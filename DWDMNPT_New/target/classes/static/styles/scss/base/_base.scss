@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 70%;
+  @include clearfix();
+}
+
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#stencil {
+  width: 10rem;
+  height: 10rem;
+  background: blue;
+  float: left;
+  background: #146dff;
+}
+
+#paperCanvas {
+  display: inline-block;
+  border: 1px solid gray;
+}
+
+#svgPaperInCanvas {
+  width: 100%;
+  height: 83rem;
+}
+
+#loadingModal {
+  display: none;
+  z-index: 1100;
+}
+
+.network-elements-container {
+  padding-right: 0px;
+  background: $color-white;
+
+  .panel {
+    border: none;
+  }
+
+  .network-elements-panel {
+    background-color: $color-white;
+    // border-right: .1rem dashed #5cb888;
+    box-shadow: 0.2rem 0px 1rem #c4c4c4;
+    width: 100%;
+    font-weight: 200;
+
+    &__content {
+      background-color: $color-white;
+      overflow: auto;
+
+      p {
+        color: #333;
+        @include borderAtBottom();
+      }
+    }
+  }
+}

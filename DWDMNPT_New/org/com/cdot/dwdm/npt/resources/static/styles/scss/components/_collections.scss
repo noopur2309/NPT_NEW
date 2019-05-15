@@ -1,0 +1,40 @@
+.collection{
+    position: relative;
+
+        &__photos {
+            width: 55%;
+            position: absolute;
+            transition: all .1s;
+            z-index: 10;
+            outline-offset: 1rem;
+            box-shadow: 0 1.5rem 4rem rgba($text-color-gray-dark, 0.5);
+
+            &--p1 {
+                left: 0;
+                top: -2rem;
+            }
+
+            &--p2 {
+                left: 23rem;
+                top: 4rem; 
+            }
+
+            &--p3 {
+                left: 4rem;
+                top: 9rem;
+            }
+
+            &:hover{
+                // transform: scale(1.05);
+                outline: 1rem solid $primary-color;
+                z-index: 20;
+            }
+        }
+
+        &:hover &__photos:not(:hover){
+            transform: scale(.95);
+        }
+
+
+
+}

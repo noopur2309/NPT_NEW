@@ -1,0 +1,418 @@
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" >
+<![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <!-- title of the document -->
+      <title>NPT</title>
+      <!-- ***************************Meta tags start************************************** -->
+      <meta charset="utf-8">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="Description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and many more ..">
+      <meta name="Keywords" content="NPT, BOM">
+      <meta itemprop="name" content="NPT - Network Planning Tool">
+      <meta itemprop="description" content="NPT is basically a Network planning tool to plan the network, generate BOM, generate Report and much more ..">
+      <meta itemprop="image" content="###">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <!-- ***************************Meta tags end************************************** -->
+      <!-- *********************Links to external files/sources **********************************-->
+      <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">   
+      <link rel="stylesheet" type="text/css" href="styles/grapheditor.css">
+      <link rel="stylesheet" type="text/css" href="styles/Bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/Bootstrap/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/main.css">
+      
+      <link rel="stylesheet" type="text/css" href="styles/contextmenu/contextMenu.css">
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+      <link rel="stylesheet" type="text/css" href="styles/accordion.css">
+      <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Gudea|Croissant+One" rel="stylesheet">
+
+      
+      
+      <!-- Icon -->
+      <link rel="icon" type="image/png" href="images/CDOT_logo.gif" sizes="32x32">
+      
+      <!-- ***************************Links End************************************** -->
+      <!-- Include pages source -->
+      <script src="/js/w3data.js"></script>
+      
+      
+      <!--  ********************************* Sources to download @runtime  *********************************
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+         
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+         
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+         
+         <script src="http://www.w3schools.com/lib/w3data.js"></script> 
+         
+         
+         
+         ********************************* ********************************* *********************************   -->
+   </head>
+   <!--  Header  -->
+   <body>     
+      <!-- Main Container Starts -->
+      <div class="container-fluid">
+      <!-- Title Bar starts -->
+      <div class="example5">
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar5">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+
+                
+                  <a class="navbar-brand" href="http://www.cdot.in"><img style="width: 64px; height:54px;" src="images/Npt_Logo_Draft_Version.png" alt="Dispute Bills"><h4>Network Planning Tool</h4>
+
+
+
+                  </a>
+               </div> 
+                        
+               <div id="navbar5" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">                     
+                     <li class="active"><a href="#">Home</a></li>
+                   	
+                   		 <li class="dropdown">
+						    <a href="#" class="dropbtn">Map</a>
+						    <div class="dropdown-content">
+
+						      <a href="#" data-toggle="modal" data-target="#myModal">Create Map</a>
+						      <a href="#"><form></form><input type="file" id="loadMap"></input><label for="loadMap">Load Map</label><form></form></a>
+						      <a href="#" id="saveMapId">Save Map</a>  
+
+						    </div>
+  						</li>
+  						
+  						<li class="dropdown">
+						    <a href="#" class="dropbtn">Analysis</a>
+						    <div class="dropdown-content">
+						      <a href="#">Fault Analysis</a>
+						      <a href="#">Bottleneck Analysis</a>						      
+						    </div>
+  						</li>
+                   	 
+                   		<li class="dropdown">
+						    <a href="#" class="dropbtn">Management</a>
+						    <div class="dropdown-content">
+						      <a href="#">Equipment</a>
+						      <a href="#">Configuration File</a>
+						      <a href="#">Inventory Listing</a>
+						    </div>
+  						</li>              
+                     
+                     <li><a href="#">View</a></li>
+                     <li><a href="#">Help</a></li>
+                  </ul>
+               </div>
+               <!--/.nav-collapse -->
+            </div>
+         </nav>
+         <!--/ nav-ends -->
+      </div>
+      <!-- Title Bar ends -->
+      
+      <!-- Tools Bar starts  -->
+      <div class="row">
+         <div class="col-md-12 col-sm-12">
+            <!-- Toolbar for direct option -->
+            <div style="left: 0px; right: 0px;" class="geToolbarContainer">
+               <div class="geToolbar">
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 28px;" title="View (Space+Drag to pan)" class="geLabel" href="javascript:void(0);">
+                     <div class="geSprite geSprite-formatpanel" style="margin-left:-4px;margin-top:-3px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; position: relative; overflow: hidden; width: 50px;" title="Zoom (Alt+Mousewheel)" class="geLabel" href="javascript:void(0);">100%<img style="position: absolute; right: 1px; top: 5px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0"></a>
+                  <div class="geSeparator"></div>
+                  <a title="Zoom In (Ctrl + / Alt+Mousewheel)" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-zoomin"></div>
+                  </a>
+                  <a title="Zoom Out (Ctrl - / Alt+Mousewheel)" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-zoomout"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Undo (Ctrl+Z)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-undo"></div>
+                  </a>
+                  <a title="Redo (Ctrl+Shift+Z)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-redo"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Delete (Delete)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-delete"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="To Front (Ctrl+Shift+F)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-tofront"></div>
+                  </a>
+                  <a title="To Back (Ctrl+Shift+B)" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-toback"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a title="Fill Color..." class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-fillcolor"></div>
+                  </a>
+                  <a title="Line Color..." class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-strokecolor"></div>
+                  </a>
+                  <a title="Shadow" class="geButton mxDisabled" href="javascript:void(0);">
+                     <div class="geSprite geSprite-shadow"></div>
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 34px;" title="Connection" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-connection" style="margin-left:0px;margin-top:0px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 34px;" title="Waypoints" class="geButton" href="javascript:void(0);">
+                     <div class="geSprite geSprite-orthogonal" style="margin-left:0px;margin-top:0px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+                  <div class="geSeparator"></div>
+                  <a style="white-space: nowrap; overflow: hidden; position: relative; width: 28px;" title="Insert (Doubleclick to insert text)" class="geLabel" href="javascript:void(0);">
+                     <div class="geSprite geSprite-plus" style="margin-left:-4px;margin-top:-3px;"></div>
+                     <img style="position: absolute; right: 4px; top: 5px; left: 24px;" src="data:image/gif;base64,R0lGODlhDQANAIABAHt7e////yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCREM1NkJFMjE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCREM1NkJFMzE0NEMxMUU1ODk1Q0M5MjQ0MTA4QjNDMSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkQzOUMzMjZCMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkQzOUMzMjZDMTQ0QjExRTU4OTVDQzkyNDQxMDhCM0MxIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAQAAAQAsAAAAAA0ADQAAAhGMj6nL3QAjVHIu6azbvPtWAAA7" valign="middle" border="0">
+                  </a>
+               </div>
+               <a class="geButton" style="position: absolute; display: inline-block; top: 5px; right: 26px; padding: 2px; font-size: 14px; width: 16px; height: 16px; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODdCREY5REY1NkQ3MTFFNTkyNjNEMTA5NjgwODUyRTgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODdCREY5RTA1NkQ3MTFFNTkyNjNEMTA5NjgwODUyRTgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4N0JERjlERDU2RDcxMUU1OTI2M0QxMDk2ODA4NTJFOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4N0JERjlERTU2RDcxMUU1OTI2M0QxMDk2ODA4NTJFOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlnMQ/8AAAAJUExURQAAAP///3FxcTfTiAsAAAACdFJOU/8A5bcwSgAAACFJREFUeNpiYEQDDEQJMMABTAAixcQ00ALoDiPRcwABBgB6DADly9Yx8wAAAABJRU5ErkJggg==&quot;);" title="Format Panel (Ctrl+Shift+P)" href="javascript:void(0);"></a>
+               <a class="geButton" style="position: absolute; display: inline-block; top: 5px; right: 42px; padding: 2px; font-size: 14px; width: 16px; height: 16px; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAQMAAABsu86kAAAABlBMVEUAAABEREQ3UJNbAAAAAXRSTlMAQObYZgAAABxJREFUCNdj+PkBhA4YgNB5AwZ+BiACMiAiEFkA9QQNgW8IGoYAAAAASUVORK5CYII=&quot;);" title="Fullscreen" href="javascript:void(0);"></a>
+               <a style="position: absolute; display: inline-block; width: 16px; height: 16px; color: rgb(102, 102, 102); top: 5px; right: 10px; padding: 2px; font-size: 14px; text-decoration: none; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDg2NEE3NUY1MUVBMTFFM0I3MUVEMTc0N0YyOUI4QzEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDg2NEE3NjA1MUVBMTFFM0I3MUVEMTc0N0YyOUI4QzEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0ODY0QTc1RDUxRUExMUUzQjcxRUQxNzQ3RjI5QjhDMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0ODY0QTc1RTUxRUExMUUzQjcxRUQxNzQ3RjI5QjhDMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pg+qUokAAAAMUExURQAAANnZ2b+/v////5bgre4AAAAEdFJOU////wBAKqn0AAAAL0lEQVR42mJgRgMMRAswMKAKMDDARBjg8lARBoR6KImkH0wTbygT6YaS4DmAAAMAYPkClOEDDD0AAAAASUVORK5CYII=&quot;); background-position: 50% 50%; background-repeat: no-repeat;" class="geButton" title="Collapse/Expand" href="javascript:void(0);"></a>
+            </div>
+            <!-- Toolbar for direct option end -->
+         </div>
+         <!-- Tool bar col ends -->
+         
+      </div>
+      <!-- toolbar ends -->
+      
+      <!-- Content Area starts -->
+      <div class="row contentArea" >
+         <!-- Navigation Start -->
+         <div class="col-md-2 col-sm-2" id="networkElementId">
+           <div class="panel panel-default">
+             <div class="panel-heading">Network Elements</div>
+             <div id="netelemId" style="width:100%;"></div>
+           </div>
+         </div>
+         <!-- Navigation -->
+         <!-- Canvas Start -->
+         <div class="col-md-7 col-sm-7" id="canvasId">    
+            <button id="clearpaper" class="btn btn-default btn-danger">Clear All</button>   
+         </div>
+         <!-- Canvas -->
+
+         
+
+         <!-- ContextMenu Start-->
+         <ul class="custom-menu">
+  			<li data-action = "portaddId" >Add Port</li>  			
+  		    <li data-action = "portremoveId">Remove Port</li>			
+			<li data-action = "deleteId">Delete</li> 	
+		</ul>         
+
+         
+
+         <!-- ContextMenu -->
+         
+         <!-- The Modal -->
+         <!-- <div w3-include-html="modal.html"></div>
+            <script>
+               w3IncludeHTML();
+            </script> -->
+
+
+		<!-- Modal for Create map -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title text-center">Create New Map</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+						 <div class="form-group">
+						 <label for="createMap">Network Name</label>
+						 <input type="text" class="form-control" placeholder="CdotNetwork" id="createMap"></input>						 
+						 </div>
+						 <button type="submit" class="btn btn-default createMapBtn form-control">Create</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- Modal Ends -->   
+
+
+		<!-- Modal End -->        
+         
+         <!-- Side Bar Start -->
+         <div class="col-md-3 col-sm-3" id="sidebar">
+           
+            <!-- <button id="mybtn" class="btn btn-primary btn-lg btn-default" >Download Map <i class="fa fa-download" aria-hidden="true"></i></button> -->
+           
+            <!-- tabs for various network properties-->
+            <div id="tabularMenu">
+               <ul class="tabs" data-persist="true">
+
+                  <li><a href="#view1">Network <i class="fa fa-cog" aria-hidden="true"></i>
+
+                     </a>
+                  </li>
+                  <li><a href="#view2">Node <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li><a href="#view3">Link <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li><a href="#view4">Demands <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li><a href="#view5">Algorithm <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li><a href="#view6">BOM <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+                  <li><a href="#view7">View Reports <i class="fa fa-cog" aria-hidden="true"></i>
+                     </a>
+                  </li>
+               </ul>
+               <div class="tabcontents">
+                  <div id="view1">
+                     <b>Network</b>
+                     <p>Coming Soon...</p>
+                  </div>
+                  <div id="view2">
+                     <!-- Node Info tab -->
+                  </div>
+                  <div id="view3">
+                   <!-- Link Info tab -->
+                  </div>
+                  <div id="view4">
+                     <b>Lorem Issum</b>
+                     <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                  </div>
+                  <div id="view5">
+                     <b>Switch to other templates</b>
+                     <p>Open this page with Notepad, and update the CSS link to:</P>
+                     <p>template1 ~ 6.</p>
+                  </div>
+                  <div id="view6">
+                     <b>Lorem Issum</b>
+                     <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                  </div>
+                  <div id="view7">
+                     <b>Switch to other templates</b>
+                     <p>Open this page with Notepad, and update the CSS link to:</P>
+                     <p>template1 ~ 6.</p>
+                  </div>
+               </div>
+            </div>
+            <!-- tabs end -->
+            
+            <!-- properties tab -->
+            <div class="panel panel-default " id="propertyOuter">
+			  <div class="panel-heading text-center" id="propertyCollapse"><strong>Properties</strong></div>
+  				<div class="panel-body" id="propertyBody"></div>
+			</div>
+			<!-- properties  -->
+			
+         </div>
+         <!-- Side Bar -->
+
+		<!-- Modal for Create map -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title text-center">Create New Map</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+						 <div class="form-group">
+						 <label for="createMap">Network Name</label>
+						 <input type="text" class="form-control" placeholder="CdotNetwork" id="createMap"></input>						 
+						 </div>
+						 <button type="submit" class="btn btn-default createMapBtn form-control">Create</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- Modal Ends -->        
+    
+	</div>
+      <!-- Content Area End -->
+
+        <!-- Footer -->
+		<footer>
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p class="text-center">NPT Copyright@Cdot,2016</p>
+			</div>
+		</div>
+		</footer>
+        <!-- Footer Ends -->        
+	</div>
+      <!-- main container ends -->	
+      <!-- **************Scripts section starts********************************-->
+     
+      <!-- Jointjs -->
+  <!--     <script src="js/jointjs/lodash.min.js"></script>
+      <script src="js/jointjs/jquery.min.js"></script>
+      <script src="js/jointjs/backbone.min.js"></script>
+      <script src="js/jointjs/joint.min.js"></script> 
+      <script src="js/jointjs/underscore.js"></script>  -->
+      <script src="js/jquery-3.1.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+       
+      <script src="/js/contextMenu/contextMenu.js"></script>      
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jointjs/1.0.1/joint.min.js"></script>  
+       <script src="js/jointjs/rappid.js"></script>
+       <!-- Customise js -->
+      <script src="js/index.js"></script>
+      <script src="js/accordion.js"></script>
+      <script src="js/tabcontent.js"></script>       
+
+      <script src="/js/jointjs/drag-drop.js"></script>
+
+      <script src="/js/context-menu.js"></script>    
+      
+      <script src="/styles/Bootstrap/js/bootstrap.min.js"></script>
+
+	  <script src="js/saveMap.js"></script>
+
+      
+      <!-- **************Scripts section ends********************************-->
+   </body>
+</html>

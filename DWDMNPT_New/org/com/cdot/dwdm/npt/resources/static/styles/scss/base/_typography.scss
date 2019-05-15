@@ -1,0 +1,105 @@
+body {
+  font-family: "Glegoo", "Gudea", sans-serif;
+  // font-weight: 100;
+  //font-size: 1.6rem;
+  //line-height: 1.7;
+  color: $text-color-gray-dark;
+  //padding: 3rem;
+}
+
+.primary-heading {
+  color: $text-color-gray-light;
+  text-transform: uppercase;
+  line-height: 1.2;
+  backface-visibility: hidden;
+  margin-bottom: 5rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 2.6rem;
+
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 1s; */
+  }
+
+  &--sub {
+    display: block;
+    font-size: 3.44rem;
+    font-weight: 300;
+    letter-spacing: 0.34rem;
+    text-align: left;
+
+    animation-name: slideInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 1s; */
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right top,
+    $primary-color,
+    $primary-color
+  );
+  -webkit-background-clip: text;
+  display: inline-block;
+  color: transparent;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale3d(1.1, 1.1, 2);
+  }
+}
+
+.heading-tertiary {
+  font-size: $default-font-size;
+  font-weight: 700;
+  letter-spacing: 1.6;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.2;
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+h1 {
+  font-family: "Passion One", cursive;
+  color: white;
+  font-size: 4.8rem;
+  text-shadow: 0.5rem 0.5rem 0.1rem #065f0a;
+  margin-bottom: 0.5rem;
+
+  /* text-decoration: underline; */
+}
+
+h6 {
+  font-family: "Ultra", serif;
+  color: white;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+#loadingModal {
+  h1 {
+    font-family: "Ultra", serif;
+    color: #3f4040;
+    font-size: 3.5rem;
+    text-shadow: 0.3rem 0.4rem 0.1rem rgba(119, 119, 119, 0.51);
+    margin-bottom: 0.5rem;
+    text-align: -webkit-center;
+  }
+}

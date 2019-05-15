@@ -1,0 +1,24 @@
+{
+  "name": "scss_npt",
+  "version": "1.0.0",
+  "description": "About ----- [draw.io](https://www.draw.io) is an online diagramming web site that delivers the source in this project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass styles/scss/home.scss styles/home.css -w",
+    "compile:bs": "node-sass styles/scss/custom-bootstrap.scss styles/css/custom-bootstrap.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "bootstrap": "^4.1.3",
+    "dagre": "^0.8.2",
+    "graphlib": "^2.1.5",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.11.0",
+    "underscore": "^1.9.1"
+  }
+}
